@@ -1,0 +1,239 @@
+.backgroundpic{
+    position: absolute;
+    top: -8rem;
+    right: 0;
+    z-index: -1;
+    width: 39.6rem;
+    height: 44.4rem;
+    
+    }
+    
+    /* section1 */
+    .star-1{
+       position: absolute;
+       left: 45%;
+    }
+    .mainstarcontainer{
+    display: flex;
+    
+    }
+    .starcontainer{
+        display: flex;
+        flex-direction: column;
+        width: 1rem;
+        padding: 10px 0px;
+    }
+    span{
+        color: #FF8400;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 3.5rem;
+        width: 23rem;
+        padding-bottom: 1.2rem;
+    }
+    .subheader{
+        display: flex;
+    }
+    .subheader p{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 22px;
+        width: 300px;
+    }
+    .headercontainer{
+        display: flex;
+        padding: 2.5rem 10rem;
+    }
+    .ellipse-1{
+        position: absolute;
+        top: 13rem;
+    }
+    .headerbutton{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+    .headerbutton1 {
+        width: 122px;
+        height: 37px;
+        border-radius: 25px;
+        background-color: #402100;
+        border: 2px solid #402100 ;
+        font-size: 18px;
+    }
+    .headerbutton2 {
+        width: 120px;
+        height: 37px;
+        border-radius: 25px;
+        background-color: white;
+        border: 2px solid #FF8400;
+        font-size: 18px;
+    }
+    .headerbutton1 a{
+        text-decoration: none ;
+        color: white;
+    }
+    .headerbutton1 a:hover, .headerbutton2 a:hover{
+        color:orangered;
+        font-weight: bold;
+    }
+    .headerbutton2 a{
+        text-decoration: none ;
+        color: black;
+    }
+    .headercontent{
+        padding-right: 14%;
+    }
+    .serviceheading{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #402100;
+        width: 12rem;
+    }
+    .servicecontent{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #131313;
+        width: 12rem;
+        text-align: justify;
+    }
+    .servicebutton{
+        width: 8.75rem;
+        height: 37px;
+        background-color: #FF8400;
+        border: 0px;
+        border-radius: 27.1154px;
+    
+    }
+    .servicebutton a{
+        text-decoration: none;
+        color: white;
+    }
+    .servicebutton a:hover{
+        color: black;
+        font-weight: bold;
+    }
+    .servicecontainer{
+        margin-top: 15%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 20%;
+    }
+    .servicecontainer2{
+        display: block;
+        padding: 5% 0;
+        
+    }
+    .servicecontainer3{
+        display: block;
+        padding: 10% 0;
+    }
+    .service{
+        font-size: 1rem;
+    }
+    
+    .servicediv{
+        border: 0px solid black;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 4px 10px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        padding: 0rem 2rem;
+        margin: 20px 0px;
+        width: 16rem;
+        height: 18rem;
+    }
+    .ellipse-2{
+        position: absolute;
+        top: 50rem;
+    }
+    .ellipse-3{
+        position: absolute;
+        top: 95rem;
+        right: 0;
+    }
+    .ellipse-4{
+        position: absolute;
+        top: 135rem;
+    }
+    .servicediv p{
+        padding: 1rem 0;
+    }
+    .heading2{
+        text-align: center;
+    }
+    h2{
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .heading2 p{
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        width: 51rem;
+        margin: 1% auto;
+    }
+    .h2content{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 4rem 15%;
+    }
+    .h2content div{
+        width: 18rem;
+        height: 19rem;
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid rgb(252, 248, 248);
+        border-radius: 28% 42% 45% 38% / 63% 65% 35% 37%;
+        box-shadow: 0px 9.43253px 18.8651px rgba(0, 0, 0, 0.04), 0px 1.88651px 5.65952px rgba(0, 0, 0, 0.04), 0px 0px 0.943253px rgba(0, 0, 0, 0.04);
+    
+    }
+    .h2content div p {
+        margin: 1rem;
+        font-size: 1rem;
+        width: 14rem;
+    }
+    .h2subcontent{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    #h2special{
+        margin-top: 5%;
+    }
+    h3{
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 2.75rem;
+        text-align: center;
+    }
+    .aboutuscontainer{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 10rem;
+        margin-bottom: 5rem;
+    }
+    .aboutuscontent{
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        width: 17rem;
+        padding: 2rem;
+        border: 1px solid rgb(248, 243, 243);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 5px;
+    }
+    .aboutuscontent p{
+        padding: 2rem 0;
+    }
+    .aboutuscontainer img{
+        position: relative;
+        top: 5rem;
+        left: 3.5rem;
+        z-index: -1;
+    }
+    .aboutuscontainer div {
+        border-top: none;
+    }

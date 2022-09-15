@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    padding: 1.5rem;
+    color: white;
+}
+.navbar a:hover{
+    color:black;
+    font-weight: bold;
+}
+.navbutton{
+    border: 2px solid #402100;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 25px;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color:#FF8400;
+    
+}
