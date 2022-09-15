@@ -13,6 +13,8 @@ import linkedin from "../../Assets/linkedin.svg";
 import twitter from "../../Assets/twitter.svg";
 import instagram from "../../Assets/instagram.svg";
 
+
+
 const Aboutpage = () => {
   return (
     <div>

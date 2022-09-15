@@ -1,0 +1,174 @@
+
+.firstpage{
+    background-color: #FF8400;
+    background-image: url('../../Assets/aboutpagepic.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50% 100%;        
+}
+
+
+.headercontainer{
+    width: 30rem;
+    height: 30rem;
+    padding: 3rem 8rem;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    width: 16rem;
+    height: 16rem;
+    color: black;
+    margin-bottom: 10%;
+}
+
+.headercontainer p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #FFFFFF;
+    width: 25rem;
+    height: 2rem;
+}
+
+.storycontainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 5rem ;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.4rem;
+    margin: 3rem 0;
+}
+
+.storysubcontainer1 p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    width: 30rem;
+    height: 11.5rem;
+    text-align: justify;
+}
+
+.storysubcontainer2{
+    padding: 3rem 0;
+}
+
+.storypara{
+    margin-bottom: 1rem;
+}
+
+.dot1{
+    position: relative;
+    top: 8%;
+    right: 14%;
+    z-index: -1;
+}
+
+.believecontainer{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #FFFFFF 15%, #f8e7cc 85%)
+}
+
+.believediv1{
+    width: 23rem;
+    height: 22rem;
+    padding: 3rem;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-top: 3px solid #FF8400;
+    background-color: white;
+    position: relative;
+    margin-left: 30%;
+    z-index: 2;
+}
+
+.believediv1 p{
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.believediv2{
+    width: 40rem;
+    padding: 8rem 2rem 8rem 1rem;
+    }
+
+.believediv2 p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.45rem; 
+    margin: 2rem; 
+    text-align: justify;
+}
+
+.dot2{
+    position: relative;
+    left: 3rem;
+    top: 12rem;
+    z-index: 1;
+}
+
+.divcontent1{
+    text-transform: uppercase;
+}
+
+.divcontent2{
+    width: 13rem;
+}
+
+.teamcontainer{
+    padding: 5rem;
+}
+
+.teamheading{
+    text-align: center;
+}
+
+h3{
+    font-weight: 500;
+    font-size:2.25rem;
+    line-height: 3rem;
+}
+
+.teamheading p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    width: 45rem;
+    margin: 0 auto 5rem auto;    
+}
+
+.teamcontainer1, .teamcontainer2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.teamsubcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamsubcontainer p{
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.23em;
+}
+
+.teamlogos  img{
+    margin: 0.75rem;
+}
+
+span{
+    color: #FF8400;
+}
