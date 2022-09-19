@@ -1,5 +1,6 @@
 import React from "react";
 import "./Homepage.css";
+import logo from "../../Assets/logo.png";
 import backgroundpic from "../../Assets/background-pic.svg";
 import star1 from "../../Assets/star-1.svg";
 import star2 from "../../Assets/star-2.svg";
@@ -13,16 +14,37 @@ import icon2 from "../../Assets/icon-2.svg";
 import icon3 from "../../Assets/icon-3.svg";
 import pic1 from "../../Assets/pic-1.png";
 import pic2 from "../../Assets/pic-2.png";
-
+import Servicecard from "../../Components/Servicecard/Servicecard";
+import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 
 
 const Homepage = () => {
+  const [changeHeader, setChangeHeader] = useState({ head1: "Business Development", head2: "Ark Foundation", head3: "Real Estate", head4: "Investment and Assest Management"})
   return (
     <div>
+      <header>
+            <div>
+                <img class="navpic" src={logo} alt="logo" />
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="\index.html" class="active">Home</a></li>
+                    <li><a href="\About-us\aboutus.html">About Us</a></li>
+                    <li><a href="\Contact-us\contactus.html">Contact Us</a></li>
+                    <li><button class="navbutton"><a href="#">Register</a></button></li>
+                </ul>
+            </nav>
+
+            <div id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+      </header>
 
       <img className="backgroundpic" src={backgroundpic} alt="background-pic" />
-
       <section className="chiefcontainer">
         <div>
           <img className="star-1" src={star1} alt="star" />
@@ -66,52 +88,12 @@ const Homepage = () => {
           <p className="serviceheading">Top Notch Business</p>
         </div>
         <div className="servicecontainer2">
-          <div className="servicediv">
-            <p className="serviceheading">Business Development</p>
-            <p className="servicecontent">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
-              vitae mus est vel ligula. Tempus eu adipiscing eget porttitor
-              sapien.
-            </p>
-            <button className="servicebutton">
-              <a href="#">Learn More</a>
-            </button>
-          </div>
-          <div className="servicediv">
-            <p className="serviceheading">Ark Foundation</p>
-            <p className="servicecontent">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
-              vitae mus est vel ligula. Tempus eu adipiscing eget porttitor
-              sapien.
-            </p>
-            <button className="servicebutton">
-              <a href="#">Learn More</a>
-            </button>
-          </div>
+          <Servicecard heading={changeHeader.head1}/> 
+          <Servicecard heading={changeHeader.head2}/>
         </div>
         <div className="servicecontainer3">
-          <div className="servicediv">
-            <p className="serviceheading">Real Estate</p>
-            <p classNam="servicecontent">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
-              vitae mus est vel ligula. Tempus eu adipiscing eget porttitor
-              sapien.
-            </p>
-            <button className="servicebutton">
-              <a href="#">Learn More</a>
-            </button>
-          </div>
-          <div className="servicediv">
-            <p className="serviceheading">Investment and Assest Management</p>
-            <p className="servicecontent">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
-              vitae mus est vel ligula. Tempus eu adipiscing eget porttitor
-              sapien.
-            </p>
-            <button className="servicebutton">
-              <a href="#">Learn More</a>
-            </button>
-          </div>
+          <Servicecard heading={changeHeader.head3}/> 
+          <Servicecard heading={changeHeader.head4}/>
         </div>
       </section>
 

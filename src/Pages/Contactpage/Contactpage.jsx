@@ -3,12 +3,25 @@ import "./Contactpage.css";
 import phoneicon from "../../Assets/phoneicon.svg";
 import messageicon from "../../Assets/messageicon.svg";
 import visiticon from "../../Assets/visiticon.svg";
+import logoblack from "../../Assets/logoblack.svg";
 
 
 
 const Contactpage = () => {
   return (
     <div>
+        <header className="topnav">
+            <div>
+                <img className="navpic" src={logoblack} alt="logo"/>
+            </div>
+            <nav className="navbar">
+                <a href="\index.html">Home</a>
+                <a href="\About-us\aboutus.html">About Us</a>
+                <a href="\Contact-us\contactus.html">Contact Us</a>
+            </nav>
+            <button className="navbutton"><a href="#" id="navvv">Register</a></button>
+        </header> 
+
         <section className="maincontactcontainer1">
         <div className="contactcontainer1">
             <div className="contactmaindiv1">

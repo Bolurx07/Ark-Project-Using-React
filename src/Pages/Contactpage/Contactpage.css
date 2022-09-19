@@ -1,21 +1,78 @@
+.topnav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    border: 0px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(235, 230, 230);
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.navbar {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 1.5rem;
+    color: black;
+}
+
+.navbar a:hover, .navbutton a:hover {
+    font-weight: bolder;
+}
+
+.navbutton{
+    border: 0px solid #402100;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 25px;
+    padding: 1px 1px;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 10rem;
+    background-color:#FF8400;
+}
+
+.navbutton a{
+    text-decoration: none;
+    padding: 1.5rem;
+    color: white;
+}
+
+#navvv{
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    margin-left: 1rem;
+}
+
 .maincontactcontainer1{
     margin-top: 6rem;
     padding: 4rem 0;
 }
+
 .contactcontainer1{
     display: flex;
     margin: 2rem 0 ;
 }
+
 .contactmaindiv1{
     background-color: #FF8400;
     flex: 50%;
     padding: 10rem 5rem;
 }
+
 .contactmaindiv2{
     flex: 50%;
     padding: 9rem 4rem;
     text-align: justify;
 }
+
 h1{
     font-weight: 600;
     font-size: 4rem;
@@ -25,6 +82,7 @@ h1{
     width: 100%;
     text-align: center;
 }
+
 .contactmaindiv2 p{
     font-weight: 400;
     font-size: 1rem;
@@ -32,15 +90,18 @@ h1{
     letter-spacing: 0.07em;
     margin-bottom: 1rem;
 }
+
 .contactcontainer2{
     display: flex;
     justify-content: space-around;
     background-color: rgba(255, 250, 242, 1);
     padding: 6rem;
 }
+
 .contactcontent{
     display: flex;
 }
+
 .contactcontent p{
     display: flex;
     align-items: center;
@@ -50,6 +111,7 @@ h1{
     font-size: 1rem;
     line-height: 1.2rem;
 }
+
 .contactpara{
     width: 12rem;
     padding: 2rem 0;
@@ -57,6 +119,7 @@ h1{
     font-size: 1rem;
     line-height: 1.2rem;
 }
+
 h2{
     font-weight: 600;
     font-size: 48px;
@@ -65,6 +128,7 @@ h2{
     color: #FF8400;
     text-align: center;
 }
+
 .formheading{
     font-weight: 400;
     font-size: 0.8rem;
@@ -74,21 +138,26 @@ h2{
     letter-spacing: 0.07em;
     text-align: center;
 }
+
 .maincontactcontainer2{
     padding: 0 5rem;
 }
+
 .formcontainer{
     margin-top: 7rem;
 }
+
 #name, #email, #message{
     border-left: none;
     border-top: none;
     border-right: none;
     width: 100%
 }
+
 input{
     padding: 2rem 0;
 }
+
 #button{
     color: white;
     background-color:#402100;
@@ -99,6 +168,7 @@ input{
     margin: 3rem auto;
     padding: 0;
 }
+
 .buttonholder{
     text-align: center;
 }

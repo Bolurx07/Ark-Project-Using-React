@@ -12,6 +12,8 @@ import teampic6 from "../../Assets/teampic6.svg";
 import linkedin from "../../Assets/linkedin.svg";
 import twitter from "../../Assets/twitter.svg";
 import instagram from "../../Assets/instagram.svg";
+import whitelogo from "../../Assets/whitelogo.svg";
+
 
 
 
@@ -20,6 +22,18 @@ const Aboutpage = () => {
     <div>
 
         <section className="firstpage">
+        <header className="topnav">
+                <div>
+                     <img className="navpic" src={whitelogo} alt="logo"/> 
+                </div>
+                <nav className="navbar">
+                    <a href="\index.html">Home</a>
+                    <a href="\About-us\aboutus.html">About Us</a>
+                    <a href="\Contact-us\contactus.html">Contact Us</a>
+                    <button className="navbutton"><a href="#" id="navvv">Register</a></button>
+                </nav>
+            </header>
+
             <div className="headercontainer">
                 <h1>We Put Our Customer first</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet v</p>

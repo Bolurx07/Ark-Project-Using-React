@@ -1,3 +1,48 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.navbar ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.navbar ul li a:hover{
+    color: black;
+    font-size: 1.6rem;
+    transition: 1s;
+}
+
+.navbutton{
+    background-color:rgb(248, 128, 0, 0);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid white;
+    border-radius: 27px;
+    padding: 0.75rem 2rem;
+}
+
+.navbutton:hover{
+    background-color: white;
+}
+
+#hamburger{
+    display: none;
+    
+}
 .backgroundpic{
     position: absolute;
     top: -8rem;
@@ -9,11 +54,11 @@
     }
     
     /* section1 */
-    .star-1{
+.star-1{
        position: absolute;
        left: 45%;
     }
-    .mainstarcontainer{
+.mainstarcontainer{
     display: flex;
     
     }
@@ -86,37 +131,6 @@
     .headercontent{
         padding-right: 14%;
     }
-    .serviceheading{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 29px;
-        color: #402100;
-        width: 12rem;
-    }
-    .servicecontent{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        color: #131313;
-        width: 12rem;
-        text-align: justify;
-    }
-    .servicebutton{
-        width: 8.75rem;
-        height: 37px;
-        background-color: #FF8400;
-        border: 0px;
-        border-radius: 27.1154px;
-    
-    }
-    .servicebutton a{
-        text-decoration: none;
-        color: white;
-    }
-    .servicebutton a:hover{
-        color: black;
-        font-weight: bold;
-    }
     .servicecontainer{
         margin-top: 15%;
         display: flex;
@@ -136,14 +150,6 @@
         font-size: 1rem;
     }
     
-    .servicediv{
-        border: 0px solid black;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 4px 10px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-        padding: 0rem 2rem;
-        margin: 20px 0px;
-        width: 16rem;
-        height: 18rem;
-    }
     .ellipse-2{
         position: absolute;
         top: 50rem;
@@ -236,4 +242,252 @@
     }
     .aboutuscontainer div {
         border-top: none;
+    }
+
+
+    @media screen and (max-width: 1125px) {
+        .headercontent span {
+            color: black;
+        }
+        .homepagepic{
+            position: absolute;
+            left: 55%;
+        }
+    }
+    
+    
+    @media screen and (max-width: 850px) {
+    
+        header{
+            background-color: rgb(233, 231, 231);
+            position: fixed;
+        }
+        #hamburger{
+            display: block;
+            cursor: pointer;
+        }
+        .bar{
+            height: 0.5rem;
+            width: 3rem;
+            margin: 0.5rem 0;
+            background-color:#FF8400;
+            border-radius: 10px;
+        }
+        .navbar{
+            position: absolute;
+            top: 8rem;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 0;
+            background-color: orange;
+            transition: 0.2s;
+            overflow: hidden;
+        }
+        .navbar.active{
+            height: 40vh;
+        }
+        .navbar ul{
+            display: block;
+            width: fit-content;
+            text-align: center;
+            margin: 1rem auto;
+            opacity: 0;
+        }
+        .navbar.active ul{
+            opacity: 1;
+            margin-top: 1rem;
+        }
+        .navbar ul li {
+            padding: 0.8rem 0;
+        }
+        .navbar ul li a{
+            color: white;
+        }
+    
+        .chiefcontainer{
+            padding-top: 20%;
+        }
+        .star-1{
+            display: none;
+        }
+        .ellipse-1{
+            display: none;
+        }
+        .backgroundpic, .homepagepic{
+            display: none;
+        }
+        .headercontainer{
+            display: block;
+            align-items: center;
+            margin: auto;
+            max-width: 100%;
+            padding: 2.5rem 5rem;
+        }
+        .headercontent{
+            padding-right: 0%;
+            align-items: center;
+            padding: 2rem;
+        }
+        h1{
+            font-size: 3.2rem;
+            width: 100%;
+            text-align: center;
+        }
+        .subheader {
+            align-items: center;
+            justify-content: center;
+        }
+        .headerbutton{
+            justify-content: space-between;
+        }
+        .servicecontainer{
+            margin-top: 0;
+            display: block;
+            padding: 0 20%;
+        }
+        .servicecontainer2, .servicecontainer3 {
+            padding: 0 10%;
+        }
+        .ellipse-2, .ellipse-4{
+            display: none;
+        }
+        .ellipse-3{
+            max-width: 3rem;
+            z-index: -1;
+        }
+        h2{
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .heading2{
+            margin: 4rem 0;
+        }
+        .heading2 p{
+            font-weight: 300;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            max-width: 20rem;
+        }
+        #h2special{
+            margin: 7% 0;
+        }
+        .h2content{
+            display: block;
+            padding: 0 25%;
+        }
+        h3{
+            font-size: 1.5rem;
+            margin-top: 4rem;
+        }
+        .aboutuscontainer{
+            display: block;
+            padding: 0 25%;
+        }
+        footer{
+            display: block;
+            padding: 3rem 25%;
+        }
+        .footercontainer2, .footercontainer3{
+            display: block;
+        }
+        .footercontainer1{
+            padding: 0 1rem;
+            padding-bottom: 15%;
+        }
+        .footercontainer2, .footersubcontainer3, .footersubcontainer1{
+            padding-bottom:15%;
+    
+        }
+    }
+    
+    
+    
+    @media screen and (max-width: 400px) {
+        h1{
+            font-size: 2rem;
+            line-height: 2.5rem;
+            padding-bottom: 0.9rem;
+        }
+        .subheader p{
+            font-size: 0.85rem;
+        }
+        .headerbutton{
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+        }
+        .headerbutton1, .headerbutton2{
+            font-size: 0.85rem;
+            width: 5rem;
+            height: 2rem;
+        }
+        .headerbutton1{
+            margin-bottom: 1rem;
+        }
+        .ellipse-3{
+            display: none;
+        }
+        .servicecontainer{
+            padding: 0 5%;
+        }
+        .serviceheading{
+            font-size: 1rem;
+            width: 9rem;
+        }
+        .servicecontent{
+            font-size: 0.7rem;
+            width: 10rem;
+        }
+        .servicediv{
+            width: 14rem;
+        }
+        h2{
+            font-size: 1.3rem;
+            padding: 1rem;
+            line-height: 1.75rem; 
+        }
+        .heading2 p{
+            font-size: 0.5rem;
+            line-height: 1rem;
+            width: 15rem;
+        }
+        .h2content{
+            padding: 0 15%;
+        }
+        .h2content div{
+            width: 14rem;
+            height: 15rem;
+        }
+        .h2content div p{
+            font-size: 0.65rem;
+            width: 10rem;
+        }
+        h3{
+            font-size: 1.3rem;
+            line-height: 1.75rem;
+        }
+        .aboutuscontainer{
+            padding: 0 15%;
+            margin-bottom: 3rem;
+        }
+        .aboutuscontent{
+            font-size: 0.85rem;
+            width: 14rem;
+            padding: 1rem;
+        }
+        .aboutuscontent p{
+            padding: 0;
+        }
+        .aboutuscontainer img{
+            top: 3rem;
+            left: 3rem;
+        }
+        footer{
+            padding: 1.5rem;
+        }
+        .footersmallfont{
+            font-size: 0.75rem;
+        }
     }

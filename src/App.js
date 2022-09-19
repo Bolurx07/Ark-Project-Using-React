@@ -1,15 +1,20 @@
-import Header from "./Components/Header/Header"
-import Footer from "./Components/Footer/Footer"
+import './App.css';
+import { Route, Routes } from 'react-router-dom'
 import Homepage from "./Pages/Homepage/Homepage"
 import Contactpage from "./Pages/Contactpage/Contactpage"
 import Aboutpage from "./Pages/Aboutpage/Aboutpage"
-import './App.css';
+import Footer from "./Components/Footer/Footer"
+
 
 
 function App() {
   return (
     <div>
-      <Header/>
+      {/* <Routes>
+      <Route path='/' element={<Homepage/>}/>
+      <Route path='Aboutpage' element={<Aboutpage/>} />
+      <Route path='Contactpage' element={<Contactpage/>} />
+    </Routes> */}
       <Homepage/>
       <Aboutpage/>
       <Contactpage/>

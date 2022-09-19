@@ -7,6 +7,73 @@
     background-size: 50% 100%;        
 }
 
+.topnav {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;  
+    overflow: hidden;
+  }
+  
+.topnav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    
+  }
+  
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+.topnav a:hover {
+    background-color: black;
+    color: #FF8400;
+    font-weight: bolder;
+  }
+  
+.navbar{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 1.5rem;
+    color: white;
+}
+
+.navbar a:hover, .navbutton a:hover{
+    font-weight: bolder;
+}
+
+.navbutton{
+    border: 0px solid #402100;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 25px;
+    padding: 5px 1px;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    background-color:#FF8400;
+}
+
+#navvv{
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    margin-left: 1rem;
+}
+
+.navbutton a{
+    text-decoration: none;
+    padding: 1.5rem;
+    color: white;
+}
 
 .headercontainer{
     width: 30rem;

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Header.css"
 import logo from "../../Assets/logo.png";
+import {Link} from 'react-router-dom'
 
 const Header = () => {
    
@@ -15,12 +16,10 @@ const Header = () => {
             <a href="\Contact-us\contactus.html">Contact Us</a>
             <button className="navbutton"><a href="#" id="navvv">Register</a></button>
         </nav>
-        {/* <div id="myLinks">
-            <a href="\index.html">Home</a>
-            <a href="\About-us\aboutus.html">About Us</a>
-            <a href="\Contact-us\contactus.html">Contact Us</a>
-            <a href="#">Register</a>
-        </div> */}
+            {/* <Link to='Aboutpage'>AboutUS</Link> */}
+     
+
+
     </header>
   )
 }
