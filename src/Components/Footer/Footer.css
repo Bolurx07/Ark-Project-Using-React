@@ -84,3 +84,33 @@ footer{
     font-weight: bold;
     font-size: 1.3rem;
 }
+
+@media screen and (max-width: 900px) {
+    footer {
+        display: block;
+        padding: 3rem 15%;
+      }
+      .footercontainer2,
+      .footercontainer3 {
+        display: block;
+      }
+      .footercontainer1 {
+        padding: 0 1rem;
+        padding-bottom: 15%;
+      }
+      .footercontainer2,
+      .footersubcontainer3,
+      .footersubcontainer1 {
+        padding-bottom: 15%;
+      }
+}
+
+
+@media screen and (max-width: 400px) {
+    footer{
+        padding: 1.5rem;
+    }
+    .footersmallfont{
+        font-size: 0.75rem;
+    }
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import "./Homepage.css";
+// import "./Homepage.css";
+import homePageStyle from "./Homepage.module.css" 
 import logo from "../../Assets/logo.png";
 import backgroundpic from "../../Assets/background-pic.svg";
 import star1 from "../../Assets/star-1.svg";
@@ -24,133 +25,132 @@ const Homepage = () => {
   const [changeHeader, setChangeHeader] = useState({ head1: "Business Development", head2: "Ark Foundation", head3: "Real Estate", head4: "Investment and Assest Management"})
   return (
     <div>
-      <header>
-            <div>
-                <img class="navpic" src={logo} alt="logo" />
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="\index.html" class="active">Home</a></li>
-                    <li><a href="\About-us\aboutus.html">About Us</a></li>
-                    <li><a href="\Contact-us\contactus.html">Contact Us</a></li>
-                    <li><button class="navbutton"><a href="#">Register</a></button></li>
-                </ul>
-            </nav>
-
-            <div id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+      <header className={homePageStyle.header}>
+        <div>
+          <img src={logo} alt="logo" />
+        </div>
+        <nav className={homePageStyle.navbar}>
+            <ul>
+                <li><Link to="/" className={homePageStyle.active}>Home</Link></li>
+                <li><Link to="Aboutpage">About Us</Link></li>
+                <li><Link to="Contactpage">Contact Us</Link></li>
+                <li><button className={homePageStyle.navbutton}><Link to="#">Register</Link></button></li>
+            </ul>
+        </nav>
+        <div id={homePageStyle.hamburger}>
+            <div className={homePageStyle.bar}></div>
+            <div className={homePageStyle.bar}></div>
+            <div className={homePageStyle.bar}></div>
+        </div>
       </header>
 
-      <img className="backgroundpic" src={backgroundpic} alt="background-pic" />
-      <section className="chiefcontainer">
+      <img className={homePageStyle.backgroundpic} src={backgroundpic} alt="background-pic" />
+      <section className={homePageStyle.chiefcontainer}>
         <div>
-          <img className="star-1" src={star1} alt="star" />
+          <img className={homePageStyle.star1} src={star1} alt="star" />
         </div>
-        <img className="ellipse-1" src={ellipse1} alt="ellipse-1" />
-        <div className="headercontainer">
-          <div className="headercontent">
-            <h1>
-              <span>Secure the</span> future with us.
+        <img className={homePageStyle.ellipse1} src={ellipse1} alt="ellipse-1" />
+        <div className={homePageStyle.headercontainer}>
+          <div className={homePageStyle.headercontent}>
+            <h1 className={homePageStyle.h1}>
+              <span className={homePageStyle.span}>Secure the</span> future with us.
             </h1>
-            <div className="subheader">
-              <div className="mainstarcontainer">
-                <div className="starcontainer">
+            <div className={homePageStyle.subheader}>
+              <div className={homePageStyle.mainstarcontainer}>
+                <div className={homePageStyle.starcontainer}>
                   <img src={star2} alt="star" />
                   <img src={star2} alt="star" />
                 </div>
                 <img src={star3} alt="star" />
               </div>
               <p>
-                Lorem ipsum <span>dolor sit</span> amet, consectetur
+                Lorem ipsum <span className={homePageStyle.span}>dolor sit</span> amet, consectetur
               </p>
             </div>
-            <div className="headerbutton">
-              <button className="headerbutton1">
+            <div className={homePageStyle.headerbutton}>
+              <button className={homePageStyle.headerbutton1}>
                 <a href="#">Sign Up</a>
               </button>
-              <button className="headerbutton2">
+              <button className={homePageStyle.headerbutton2}>
                 <a href="#">Explore</a>
               </button>
             </div>
           </div>
-          <img className="homepagepic" src={homepagepic} alt="homepagepic" />
+          <img className={homePageStyle.homepagepic} src={homepagepic} alt="homepagepic" />
         </div>
       </section>
 
-      <img className="ellipse-2" src={ellipse2} alt="ellipse-2" />
+      <img className={homePageStyle.ellipse2} src={ellipse2} alt="ellipse-2" />
 
-      <section className="servicecontainer">
-        <div className="servicecontainer1">
-          <span className="service">Services</span>
-          <p className="serviceheading">Top Notch Business</p>
+      <section className={homePageStyle.servicecontainer}>
+        <div className={homePageStyle.servicecontainer1}>
+          <span className={homePageStyle.span} id={homePageStyle.service}>Services</span>
+          <p className={homePageStyle.serviceheading}>Top Notch Business</p>
         </div>
-        <div className="servicecontainer2">
+        <div className={homePageStyle.servicecontainer2}>
           <Servicecard heading={changeHeader.head1}/> 
           <Servicecard heading={changeHeader.head2}/>
         </div>
-        <div className="servicecontainer3">
+        <div className={homePageStyle.servicecontainer3}>
           <Servicecard heading={changeHeader.head3}/> 
           <Servicecard heading={changeHeader.head4}/>
         </div>
       </section>
 
-      <img className="ellipse-3" src={ellipse3} alt="ellipse-3"/>
+      <img className={homePageStyle.ellipse3} src={ellipse3} alt="ellipse-3"/>
 
     <section>
-        <div className="heading2">
-            <h2>We Are Top Notch At What We Render.</h2>
+        <div className={homePageStyle.heading2}>
+            <h2 className={homePageStyle.h2}>We Are Top Notch At What We Render.</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
         </div>
-        <div className="h2content" >
+        <div className={homePageStyle.h2content} >
             <div>
                 <img src={icon1} alt="icon-1"/>
-                <p className="h2subcontent">Quality Service</p>
+                <p className={homePageStyle.h2subcontent}>Quality Service</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div id="h2special">
+            <div id={homePageStyle.h2special}>
                 <img src={icon2} alt="icon-2"/>
-                <p className="h2subcontent">Quality Service</p>
+                <p className={homePageStyle.h2subcontent}>Quality Service</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div>
                 <img src={icon3} alt="icon-3"/>
-                <p className="h2subcontent">Quality Service</p>
+                <p className={homePageStyle.h2subcontent}>Quality Service</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-        <h3>What People Say About Us.</h3>
-        <div className="aboutuscontainer">
+        <h3 className={homePageStyle.h3}>What People Say About Us.</h3>
+        <div className={homePageStyle.aboutuscontainer}>
             <div>
                 <img src={pic1} alt="pic-1"/>
-                <div className="aboutuscontent">
+                <div className={homePageStyle.aboutuscontent}>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span>Tobiloba K.</span>
+                    <span className={homePageStyle.span}>Tobiloba K.</span>
                 </div>
             </div>
             <div>
                 <img src={pic2} alt="pic-2"/>
-                <div className="aboutuscontent">
+                <div className={homePageStyle.aboutuscontent}>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span>Tobiloba K.</span>
+                    <span className={homePageStyle.span}>Tobiloba K.</span>
                 </div>
             </div>
             <div>
                 <img src={pic1} alt="pic-3"/>
-                <div className="aboutuscontent">
+                <div className={homePageStyle.aboutuscontent}>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span>Tobiloba K.</span>
+                    <span className={homePageStyle.span}>Tobiloba K.</span>
                 </div>
             </div>
         </div>
     </section>
     
-    <img className="ellipse-4" src={ellipse2}alt="ellipse-4"></img>
+    <img className={homePageStyle.ellipse4} src={ellipse2}alt="ellipse-4"></img>
 
     </div>
   );

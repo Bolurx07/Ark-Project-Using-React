@@ -1,0 +1,382 @@
+
+.firstpage{
+    background-color: #FF8400;
+    background-image: url('../../Assets/aboutpagepic.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50% 100%;        
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar ul li {
+    list-style: none;
+    padding: 0 1rem;
+  }
+  .navbar ul li a {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .navbar ul li a:hover {
+    font-size: 1.8rem;
+    transition: 1s;
+  }
+  .navbutton {
+    background-color: rgba(126, 125, 125, 0);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04),
+      0px 0px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid white;
+    border-radius: 27px;
+    padding: 0.75rem 2rem;
+  }
+  .navbutton:hover {
+    background-color: white;
+  }
+  .navbutton a:hover {
+    color: black;
+  }
+  #hamburger {
+    display: none;
+  }
+
+.headercontainer{
+    width: 30rem;
+    height: 30rem;
+    padding: 3rem 8rem;
+}
+
+.h1{
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    width: 16rem;
+    height: 16rem;
+    color: black;
+    margin-bottom: 10%;
+}
+
+.headercontainer p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #FFFFFF;
+    width: 25rem;
+    height: 2rem;
+}
+
+.storycontainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3rem 5rem ;
+}
+
+.h2{
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.4rem;
+    margin: 3rem 0;
+}
+
+.storysubcontainer1 p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    width: 30rem;
+    height: 11.5rem;
+    text-align: justify;
+}
+
+.storysubcontainer2{
+    padding: 3rem 0;
+}
+
+.storypara{
+    margin-bottom: 1rem;
+}
+
+.dot1{
+    position: relative;
+    top: 8%;
+    right: 14%;
+    z-index: -1;
+}
+
+.believecontainer{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #FFFFFF 15%, #f8e7cc 85%)
+}
+
+.believediv1{
+    width: 23rem;
+    height: 22rem;
+    padding: 3rem;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-top: 3px solid #FF8400;
+    background-color: white;
+    position: relative;
+    margin-left: 30%;
+    z-index: 2;
+}
+
+.believediv1 p{
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.believediv2{
+    width: 40rem;
+    padding: 8rem 2rem 8rem 1rem;
+    }
+
+.believediv2 p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.45rem; 
+    margin: 2rem; 
+    text-align: justify;
+}
+
+.dot2{
+    position: relative;
+    left: 3rem;
+    top: 12rem;
+    z-index: 1;
+}
+
+.divcontent1{
+    text-transform: uppercase;
+}
+
+.divcontent2{
+    width: 13rem;
+}
+
+.teamcontainer{
+    padding: 5rem;
+}
+
+.teamheading{
+    text-align: center;
+}
+
+.h3{
+    font-weight: 500;
+    font-size:2.25rem;
+    line-height: 3rem;
+}
+
+.teamheading p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    width: 45rem;
+    margin: 0 auto 5rem auto;    
+}
+
+.teamcontainer1, .teamcontainer2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.teamsubcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamsubcontainer p{
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.23em;
+}
+
+.teamlogos  img{
+    margin: 0.75rem;
+}
+
+.span{
+    color: #FF8400;
+}
+
+
+@media screen and (max-width: 900px) {
+    .firstpage{
+      height: 100vh;
+    }
+    #hamburger {
+      display: block;
+      cursor: pointer;
+    }
+    .bar {
+      height: 0.5rem;
+      width: 3rem;
+      margin: 0.5rem 0;
+      background-color: #ff8400;
+      border-radius: 10px;
+    }
+    .navbar {
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      height: 0;
+      background-color: black;
+      transition: 0.2s;
+      overflow: hidden;
+    }
+    .navbar.active {
+      height: 40vh;
+    }
+    .navbar ul {
+      display: block;
+      width: fit-content;
+      text-align: center;
+      margin: 1rem auto;
+      opacity: 0;
+    }
+    .navbar.active ul {
+      opacity: 1;
+      margin-top: 1rem;
+    }
+    .navbar ul li {
+      padding: 0.8rem 0;
+    }
+    .navbar ul li a {
+      color: white;
+    }
+  
+    .headercontainer {
+      padding: 3rem 5rem;
+    }
+    .h1 {
+      font-size: 3rem;
+    }
+    .headercontainer p {
+      width: 20rem;
+    }
+    .storycontainer {
+      display: block;
+      padding: 2rem;
+    }
+    .storysubcontainer1 {
+      text-align: center;
+    }
+    .h2 {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+    .storysubcontainer1 p {
+      font-size: 1.25rem;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      padding: 1rem 5rem;
+    }
+    .storysubcontainer2 {
+      padding: 0;
+    }
+    .storypic {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+    }
+    .storypara {
+      margin-bottom: 0;
+    }
+    .dot1 {
+      display: none;
+    }
+    .believecontainer {
+      display: block;
+      background: linear-gradient(to bottom, #ffffff 15%, #f8e7cc 85%);
+    }
+    .believediv1 {
+      margin: 0 auto;
+      width: 20rem;
+      height: 20rem;
+    }
+    .dot2 {
+      display: none;
+    }
+    .believediv2 {
+      width: 100%;
+      padding: 0 5rem 3rem 5rem;
+    }
+    .h3 {
+      font-size: 1.85rem;
+    }
+    .teamcontainer {
+      padding: 3rem;
+    }
+    .teamheading p {
+      font-size: 14px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .teamcontainer1,
+    .teamcontainer2 {
+      display: block;
+      margin: 2rem auto;
+    }
+    .mainteamcontainer {
+      display: flex;
+    }
+    .teamsubcontainer {
+      margin-bottom: 2rem;
+    }
+    .teamsubcontainer p {
+      font-size: 0.85rem;
+      letter-spacing: 0;
+    }
+    .teampic {
+      width: 8rem;
+    }
+    .teamlogos img {
+      margin: 0.45rem;
+    }
+    .span {
+      font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .headercontainer {
+      padding: 2rem;
+      width: 18rem;
+    }
+    .headercontainer p {
+      width: 16rem;
+  }
+  .h1{
+    font-size: 2.5rem;
+    width: 12rem;
+  }
+  .believediv1 {
+    margin: 0 auto;
+    width: 17rem;
+    height: 17rem;
+  }
+  }
+  
+  

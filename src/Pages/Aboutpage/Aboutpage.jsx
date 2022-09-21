@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Aboutpage.css";
 import storypic from "../../Assets/storypic.svg";
 import dots1 from "../../Assets/dots1.svg";
 import dots2 from "../../Assets/dots2.svg";
@@ -13,7 +12,8 @@ import linkedin from "../../Assets/linkedin.svg";
 import twitter from "../../Assets/twitter.svg";
 import instagram from "../../Assets/instagram.svg";
 import whitelogo from "../../Assets/whitelogo.svg";
-
+import {Link} from 'react-router-dom'
+import aboutPageStyle from "./Aboutpage.module.css"
 
 
 
@@ -21,118 +21,127 @@ const Aboutpage = () => {
   return (
     <div>
 
-        <section className="firstpage">
-        <header className="topnav">
+        <section className={aboutPageStyle.firstpage}>
+            <header className={aboutPageStyle.topnav}>
                 <div>
-                     <img className="navpic" src={whitelogo} alt="logo"/> 
+                    <img src={whitelogo} alt="logo" />
                 </div>
-                <nav className="navbar">
-                    <a href="\index.html">Home</a>
-                    <a href="\About-us\aboutus.html">About Us</a>
-                    <a href="\Contact-us\contactus.html">Contact Us</a>
-                    <button className="navbutton"><a href="#" id="navvv">Register</a></button>
+                <nav className={aboutPageStyle.navbar}>
+                    <ul>
+                        
+                        <li><Link to="/" className={aboutPageStyle.active}>Home</Link></li>
+                        <li><Link to="/Aboutpage">About Us</Link></li>
+                        <li><Link to="/Contactpage">Contact Us</Link></li>
+                        <li><button className={aboutPageStyle.navbutton}><Link to="#">Register</Link></button></li>
+                    </ul>
                 </nav>
+    
+                <div id={aboutPageStyle.hamburger}>
+                    <div className={aboutPageStyle.bar}></div>
+                    <div className={aboutPageStyle.bar}></div>
+                    <div className={aboutPageStyle.bar}></div>
+                </div>
             </header>
 
-            <div className="headercontainer">
-                <h1>We Put Our Customer first</h1>
+            <div className={aboutPageStyle.headercontainer}>
+                <h1 className={aboutPageStyle.h1}>We Put Our Customer first</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet v</p>
             </div>
         </section>
         
-        <section className="storycontainer">
-            <div className="storysubcontainer1">
-                <h2>Our Story.</h2>
-                <p className="storypara">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur faucibus leo nascetur feugiat. Amet eleifend tincidunt morbi odio. Mus id eget sagittis imperdiet ac nulla arcu sagittis, accumsan.</p>
+        <section className={aboutPageStyle.storycontainer}>
+            <div className={aboutPageStyle.storysubcontainer1}>
+                <h2 className={aboutPageStyle.h2}>Our Story.</h2>
+                <p className={aboutPageStyle.storypara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur faucibus leo nascetur feugiat. Amet eleifend tincidunt morbi odio. Mus id eget sagittis imperdiet ac nulla arcu sagittis, accumsan.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur faucibus leo nascetur feugiat. Amet eleifend tincidunt morbi odio. Mus id eget sagittis imperdiet ac nulla arcu sagittis, accumsan.</p>
             </div>
-            <div className="storysubcontainer2">
-                <img className="storypic" src={storypic} alt="storypic"/>
-                <img className="dot1" src={dots1} alt="Dotgroup"/>
+            <div className={aboutPageStyle.storysubcontainer2}>
+                <img className={aboutPageStyle.storypic} src={storypic} alt="storypic"/>
+                <img className={aboutPageStyle.dots1} src={dots1} alt="Dotgroup"/>
             </div>
         </section>
-        <section className="believecontainer">
+        <section className={aboutPageStyle.believecontainer}>
             <div>
-            <img className="dot2" src={dots2} alt="Dotgroup"/>
-                <div className="believediv1">
-                    <p className="divcontent1">--- We believe in</p>
-                    <p className="divcontent2">insert company's tagline here”.</p>
+            <img className={aboutPageStyle.dot2} src={dots2} alt="Dotgroup"/>
+                <div className={aboutPageStyle.believediv1}>
+                    <p className={aboutPageStyle.divcontent1}>--- We believe in</p>
+                    <p className={aboutPageStyle.divcontent2}>insert company's tagline here”.</p>
                 </div>
             </div>
-            <div className="believediv2" >
+            <div className={aboutPageStyle.believediv2}>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget tortor elit erat ac urna, purus vel, suspendisse. Interdum mollis diam amet lectus. Sed nunc, accumsan porta turpis elementum at.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget tortor elit erat ac urna, purus vel, suspendisse. Interdum mollis diam amet lectus. Sed nunc, accumsan porta turpis elementum at.</p>
             </div>
         </section>
 
-        <section className="teamcontainer">
-            <div className="teamheading">
-                <h3>Our Team Members</h3>
+        <section className={aboutPageStyle.teamcontainer}>
+            <div className={aboutPageStyle.teamheading}>
+                <h3 className={aboutPageStyle.h3}>Our Team Members</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
             </div>
-            <div className="mainteamcontainer">
-                <div className="teamcontainer1">
-                    <div className="teamsubcontainer">
-                        <img className="teampic" src={teampic1} alt="teampic"/>
+            <div className={aboutPageStyle.mainteamcontainer}>
+                <div className={aboutPageStyle.teamcontainer1}>
+                    <div className={aboutPageStyle.teamsubcontainer}>
+                        <img className={aboutPageStyle.teampic} src={teampic1} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
-                    <div className="teamsubcontainer">
-                        <img className="teampic" src={teampic2} alt="teampic"/>
+                    <div className={aboutPageStyle.teamsubcontainer}>
+                        <img className={aboutPageStyle.teampic} src={teampic2} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
-                    <div className="teamsubcontainer">
-                        <img className="teampic" src={teampic3} alt="teampic"/>
+                    <div className={aboutPageStyle.teamsubcontainer}>
+                        <img className={aboutPageStyle.teampic} src={teampic3} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
                 </div>
-                <div className="teamcontainer2">
-                    <div className="teamsubcontainer">
-                        <img className="teampic" src={teampic4} alt="teampic"/>
+                <div className={aboutPageStyle.teamcontainer2}>
+                    <div className={aboutPageStyle.teamsubcontainer}>
+                        <img className={aboutPageStyle.teampic} src={teampic4} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
-                    <div className="teamsubcontainer" >
-                        <img className="teampic" src={teampic5} alt="teampic"/>
+                    <div className={aboutPageStyle.teamsubcontainer} >
+                        <img className={aboutPageStyle.teampic} src={teampic5} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
-                    <div className="teamsubcontainer">
-                    <img className="teampic" src={teampic6} alt="teampic"/>
+                    <div className={aboutPageStyle.teamsubcontainer}>
+                        <img className={aboutPageStyle.teampic} src={teampic6} alt="teampic"/>
                         <p>Kolawole Oluwatobi</p>
-                        <div className="teamlogos">
+                        <div className={aboutPageStyle.teamlogos}>
                             <img src={linkedin} alt="linkedin"/>
                             <img src={twitter} alt="twitter"/>
                             <img src={instagram} alt="instagram"/>
                         </div>
-                        <span>CEO</span>
+                        <span className={aboutPageStyle.span}>CEO</span>
                     </div>
                 </div>
             </div>

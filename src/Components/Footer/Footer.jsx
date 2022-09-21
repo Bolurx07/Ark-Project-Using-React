@@ -4,8 +4,8 @@ import logoblack from "../../Assets/logoblack.svg";
 import facebook from "../../Assets/facebook.svg";
 import twitter from "../../Assets/twitter.svg";
 import instagram from "../../Assets/instagram.svg";
-// import Asset from "../../Assets";
-// import {logoblack,facebook,twitter,instagram} from Asset;
+import {Link} from 'react-router-dom'
+
 
 
 
@@ -35,7 +35,7 @@ const Footer = () => {
     <div className="footercontainer3">
         <div className="footersubcontainer3">
             <p id="footerheading">Quick Links</p>
-            <a href="\index.html">Home</a>
+            <Link to="/" class="active">Home</Link>
             <a href="#">Register</a>
         </div>
         <div className="footersubcontainer4">

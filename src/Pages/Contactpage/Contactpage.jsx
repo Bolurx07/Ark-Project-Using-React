@@ -1,78 +1,88 @@
 import React from 'react'
-import "./Contactpage.css";
 import phoneicon from "../../Assets/phoneicon.svg";
 import messageicon from "../../Assets/messageicon.svg";
 import visiticon from "../../Assets/visiticon.svg";
 import logoblack from "../../Assets/logoblack.svg";
-
+import {Link} from 'react-router-dom'
+import contactPageStyle from "./Contactpage.module.css"
 
 
 const Contactpage = () => {
   return (
     <div>
-        <header className="topnav">
+        <header className={contactPageStyle.myHeader}>
             <div>
-                <img className="navpic" src={logoblack} alt="logo"/>
+                <img src={logoblack} alt="logo" />
             </div>
-            <nav className="navbar">
-                <a href="\index.html">Home</a>
-                <a href="\About-us\aboutus.html">About Us</a>
-                <a href="\Contact-us\contactus.html">Contact Us</a>
+            <nav className={contactPageStyle.navbar}>
+                <ul>
+                   <li><Link to="/" className={contactPageStyle.active}>Home</Link></li>
+                    <li><Link to="/Aboutpage">About Us</Link></li>
+                    <li><Link to="/Contactpage">Contact Us</Link></li>
+                </ul>
             </nav>
-            <button className="navbutton"><a href="#" id="navvv">Register</a></button>
-        </header> 
-
-        <section className="maincontactcontainer1">
-        <div className="contactcontainer1">
-            <div className="contactmaindiv1">
-                <h1>Contact Us</h1>
+            <ul>
+                <li><button  className={contactPageStyle.navbutton}><a href="#">Register</a></button></li>
+            </ul>
+        
+            <div id={contactPageStyle.hamburger}>
+                <div className={contactPageStyle.bar}></div>
+                <div className={contactPageStyle.bar}></div>
+                <div className={contactPageStyle.bar}></div>
             </div>
-            <div className="contactmaindiv2">
+        </header>
+
+        <section className={contactPageStyle.maincontactcontainer1}>
+        <div className={contactPageStyle.contactcontainer1}>
+            <div className={contactPageStyle.contactmaindiv1}>
+                <h1 className={contactPageStyle.h1}>Contact Us</h1>
+            </div>
+            <div className={contactPageStyle.contactmaindiv2}>
                 <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
                 <p>Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere.</p>
             </div>
         </div>
 
-        <div className="contactcontainer2">
-            <div className="phonediv">
-                <div className="contactcontent">
+        <div className={contactPageStyle.contactcontainer2}>
+            <div className={contactPageStyle.phonediv}>
+                <div className={contactPageStyle.contactcontent}>
                     <img src={phoneicon} alt="phoneicon"/>
                     <p>Call us</p>
                 </div>
-                <p className="contactpara">+234 816 995 4691</p>
+                <p className={contactPageStyle.contactpara}>+234 816 995 4691</p>
             </div>
-            <div className="messagediv">
-                <div className="contactcontent">
+            <div className={contactPageStyle.messagediv}>
+                <div className={contactPageStyle.contactcontent}>
                     <img src={messageicon} alt="messageicon"/>
                     <p>Message us</p>
                 </div>
-                <p className="contactpara">info@arkprojectsng.com</p>
+                <p className={contactPageStyle.contactpara}>info@arkprojectsng.com</p>
             </div>
-            <div className="phonediv">
-                <div className="contactcontent">
+            <div className={contactPageStyle.phonediv}>
+                <div className={contactPageStyle.contactcontent}>
                     <img src={visiticon} alt="visiticon"/>
                     <p>Visit us</p>
                 </div>
-                <p className="contactpara">5678 Extra Rd. #123 San Francisco, CA 96120</p>
+                <p className={contactPageStyle.contactpara}>5678 Extra Rd. #123 San Francisco, CA 96120</p>
             </div>
         </div>
     </section>
 
-    <section className="maincontactcontainer2">
-        <h2>Get In Touch</h2>
-        <p className="formheading">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        <div className="formcontainer">
+    <section className={contactPageStyle.maincontactcontainer2}>
+        <h2 className={contactPageStyle.h2}>Get In Touch</h2>
+        <p className={contactPageStyle.formheading}>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div className={contactPageStyle.formcontainer}>
           <form action="action_page.php">
-            <input type="text" id="name" name="name" placeholder="Name"/>
+            <input type="text" id={contactPageStyle.name} name="name" placeholder="Name"/>
             <br/><br/>
-            <input type="email" id="email" name="email" placeholder="Email address"/>
+            <input type="email" id={contactPageStyle.email} name="email" placeholder="Email address"/>
             <br/><br/>
-            <textarea name="message" id="message" placeholder="message" rows="20" cols="30"></textarea>
+            <textarea name="message" id={contactPageStyle.message} placeholder="message" rows="20" cols="30"></textarea>
             <br/><br/>
           </form>
         </div>
-        <div className="buttonholder">
-            <input id="button" type="submit" value="Submit"/>
+        <div className={contactPageStyle.buttonholder}>
+            <input id={contactPageStyle.button} type="submit" value="Submit"/>
         </div>
     </section>
 

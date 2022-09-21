@@ -1,4 +1,4 @@
-header{
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +14,7 @@ header{
 }
 .navbar ul li {
     list-style: none;
+    padding: 0 1rem;
 }
 .navbar ul li a{
     font-size: 1.5rem;
@@ -23,7 +24,7 @@ header{
 }
 .navbar ul li a:hover{
     color: black;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     transition: 1s;
 }
 
@@ -41,8 +42,8 @@ header{
 
 #hamburger{
     display: none;
-    
 }
+
 .backgroundpic{
     position: absolute;
     top: -8rem;
@@ -54,7 +55,7 @@ header{
     }
     
     /* section1 */
-.star-1{
+.star1{
        position: absolute;
        left: 45%;
     }
@@ -68,13 +69,13 @@ header{
         width: 1rem;
         padding: 10px 0px;
     }
-    span{
+    .span{
         color: #FF8400;
     }
-    h1{
+    .h1{
         font-weight: 700;
         font-size: 4.2rem;
-        line-height: 3.5rem;
+        line-height: 4.5rem;
         width: 23rem;
         padding-bottom: 1.2rem;
     }
@@ -91,7 +92,7 @@ header{
         display: flex;
         padding: 2.5rem 10rem;
     }
-    .ellipse-1{
+    .ellipse1{
         position: absolute;
         top: 13rem;
     }
@@ -146,20 +147,20 @@ header{
         display: block;
         padding: 10% 0;
     }
-    .service{
+    #service{
         font-size: 1rem;
     }
     
-    .ellipse-2{
+    .ellipse2{
         position: absolute;
         top: 50rem;
     }
-    .ellipse-3{
+    .ellipse3{
         position: absolute;
         top: 95rem;
         right: 0;
     }
-    .ellipse-4{
+    .ellipse4{
         position: absolute;
         top: 135rem;
     }
@@ -169,7 +170,7 @@ header{
     .heading2{
         text-align: center;
     }
-    h2{
+    .h2{
         font-weight: 700;
         font-size: 2.5rem;
         line-height: 3rem;
@@ -209,7 +210,7 @@ header{
     #h2special{
         margin-top: 5%;
     }
-    h3{
+    .h3{
         font-weight: 700;
         font-size: 2.2rem;
         line-height: 2.75rem;
@@ -253,12 +254,15 @@ header{
             position: absolute;
             left: 55%;
         }
+        .star1{
+            display: none;
+        }
     }
     
     
     @media screen and (max-width: 850px) {
     
-        header{
+        .header{
             background-color: rgb(233, 231, 231);
             position: fixed;
         }
@@ -308,10 +312,7 @@ header{
         .chiefcontainer{
             padding-top: 20%;
         }
-        .star-1{
-            display: none;
-        }
-        .ellipse-1{
+        .ellipse1{
             display: none;
         }
         .backgroundpic, .homepagepic{
@@ -329,7 +330,7 @@ header{
             align-items: center;
             padding: 2rem;
         }
-        h1{
+        .h1{
             font-size: 3.2rem;
             width: 100%;
             text-align: center;
@@ -349,14 +350,14 @@ header{
         .servicecontainer2, .servicecontainer3 {
             padding: 0 10%;
         }
-        .ellipse-2, .ellipse-4{
+        .ellipse2, .ellipse4{
             display: none;
         }
-        .ellipse-3{
+        .ellipse3{
             max-width: 3rem;
             z-index: -1;
         }
-        h2{
+        .h2{
             font-weight: 700;
             font-size: 1.5rem;
             line-height: 2rem;
@@ -377,7 +378,7 @@ header{
             display: block;
             padding: 0 25%;
         }
-        h3{
+        .h3{
             font-size: 1.5rem;
             margin-top: 4rem;
         }
@@ -405,7 +406,7 @@ header{
     
     
     @media screen and (max-width: 400px) {
-        h1{
+        .h1{
             font-size: 2rem;
             line-height: 2.5rem;
             padding-bottom: 0.9rem;
@@ -426,7 +427,7 @@ header{
         .headerbutton1{
             margin-bottom: 1rem;
         }
-        .ellipse-3{
+        .ellipse3{
             display: none;
         }
         .servicecontainer{
@@ -443,7 +444,7 @@ header{
         .servicediv{
             width: 14rem;
         }
-        h2{
+        .h2{
             font-size: 1.3rem;
             padding: 1rem;
             line-height: 1.75rem; 
@@ -464,7 +465,7 @@ header{
             font-size: 0.65rem;
             width: 10rem;
         }
-        h3{
+        .h3{
             font-size: 1.3rem;
             line-height: 1.75rem;
         }

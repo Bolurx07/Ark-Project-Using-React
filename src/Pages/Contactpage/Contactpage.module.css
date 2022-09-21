@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+/* Navbar */
+.myHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.navbar ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.myHeader ul li {
+    list-style: none;
+    padding: 0 1rem;
+}
+.myHeader ul li a{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.myHeader li a:hover{
+    font-size: 1.8rem;
+    transition: 1s;
+}
+.navbutton{
+    background-color:#FF8400;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid white;
+    border-radius: 27px;
+    padding: 0.75rem 2rem;
+}
+.navbutton:hover{
+    background-color: white;
+}
+
+.navbutton a:hover{
+    color: black;
+}
+
+#hamburger{
+    display: none;
+}
+.maincontactcontainer1{
+    padding: 4rem 0;
+}
+.contactcontainer1{
+    display: flex;
+    margin: 2rem 0 ;
+    margin-bottom: 5rem;
+}
+.contactmaindiv1{
+    background-color: #FF8400;
+    flex: 50%;
+    padding: 10rem 5rem;
+}
+.contactmaindiv2{
+    flex: 50%;
+    padding: 9rem 4rem;
+    text-align: justify;
+}
+.h1{
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    letter-spacing: 0.07em;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+}
+.contactmaindiv2 p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.07em;
+    margin-bottom: 1rem;
+}
+.contactcontainer2{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 250, 242, 1);
+    padding: 6rem;
+}
+.contactcontent{
+    display: flex;
+}
+.contactcontent p{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+.contactpara{
+    width: 12rem;
+    padding: 2rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+.h2{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.07em;
+    /* color: #FF8400; */
+    text-align: center;
+}
+.formheading{
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 0 auto;
+    width: 33rem;
+    letter-spacing: 0.07em;
+    text-align: center;
+}
+.maincontactcontainer2{
+    padding: 0 5rem;
+}
+.formcontainer{
+    margin-top: 7rem;
+}
+#name, #email, #message{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    width: 100%
+}
+input{
+    padding: 2rem 0;
+}
+#button{
+    color: white;
+    background-color:#402100;
+    border-radius: 1.9rem;
+    width: 138.49px;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    margin: 3rem auto;
+    padding: 0;
+}
+.buttonholder{
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .myHeader{
+        position: fixed;
+        top: 0;
+        background-color: rgb(233, 231, 231);
+    }
+    #hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .bar{
+        height: 0.5rem;
+        width: 3rem;
+        margin: 0.5rem 0;
+        background-color:#FF8400;
+        border-radius: 10px;
+    }
+    .navbar{
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 0;
+        background-color: black;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+    .navbar.active{
+        height: 30vh;
+    }
+    .myHeader ul{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        text-align: center;
+        margin: 1rem auto;
+        opacity: 0;
+    }
+    .navbar.active ul{
+        opacity: 1;
+        margin-top: 1rem;
+    }
+    .navbar ul li {
+        padding: 0.8rem 0;
+    }
+    .navbar ul li a{
+        color: white;
+    } 
+    .navbutton{
+        display: none;
+    }   
+    .h1{
+        font-size: 2rem;
+    }
+    .maincontactcontainer1{
+        padding: 0;
+        margin-bottom: 2rem;
+        margin-top: 12rem;
+    }
+    .contactcontainer1{
+        margin-bottom: 2rem;
+    }
+    .contactmaindiv1, .contactmaindiv2{
+        padding: 6rem 1.5rem;
+        margin: auto;
+    }
+    .contactmaindiv2 p{
+        font-size: 0.65rem;
+    }
+    .contactcontainer2{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+    .contactpara{
+        padding: 0;
+    } 
+    .phonediv, .messagediv{
+        margin-bottom: 2rem;
+    }
+    .formheading{
+        width: 100%;
+    }
+    }
+
+
+    @media screen and (max-width: 500px) {
+    .contactcontainer1{
+         display: block;
+        margin: 0 ;
+        }       
+    .contactmaindiv2{
+        padding: 3rem 1.5rem;
+    }
+    .contactmaindiv1{
+        margin-top: 1rem;
+    }
+    }
