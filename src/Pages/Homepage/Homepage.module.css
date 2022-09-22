@@ -1,3 +1,4 @@
+    /* Navbar  */
 .header{
     display: flex;
     justify-content: space-between;
@@ -6,23 +7,23 @@
     width: 100%;
     margin-bottom: 2rem;
 }
-.navbar ul{
+.header ul{
     
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.navbar ul li {
+.header ul li {
     list-style: none;
     padding: 0 1rem;
 }
-.navbar ul li a{
+.header ul li a{
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
     transition: 0.5s;
 }
-.navbar ul li a:hover{
+.header ul li a:hover{
     color: black;
     font-size: 1.8rem;
     transition: 1s;
@@ -40,10 +41,12 @@
     background-color: white;
 }
 
-#hamburger{
+/* #hamburger{
     display: none;
 }
-
+.xbar{
+    display: none;
+} */
 .backgroundpic{
     position: absolute;
     top: -8rem;
@@ -251,7 +254,9 @@
     .aboutuscontainer div {
         border-top: none;
     }
-
+    #burger{
+        display: none;
+    }
 
     @media screen and (max-width: 1125px) {
         .headercontent span {
@@ -269,21 +274,64 @@
     
     @media screen and (max-width: 850px) {
     
+        #burger{
+            display: block;
+            cursor: pointer;
+            font-size: 5rem;
+            color: #FF8400;
+        }
+        .active{
+            display: block;
+            
+        }
+        .navbar{
+            display: none;
+        } 
+
+        .active ul{
+            display: block;
+            /* position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            height: 0;
+            background-color: orange;
+            transition: 0.2s;
+            overflow: hidden; */
+        }
+        .active ul li{
+            padding: 2rem 0;
+            color:blue;
+        }
+        /* .active ul li a{
+            color: red;
+            width: fit-content;
+            text-align: center;
+            margin: 1rem auto;
+            opacity: 1;
+        }  */
+
+
         .header{
             background-color: rgb(233, 231, 231);
             position: fixed;
         }
-        #hamburger{
+        /* #hamburger{
             display: block;
             cursor: pointer;
-        }
-        .bar{
+        } */
+        /* .xbar{
+            display: block;
+            font-size: 4rem;
+        } */
+        /* .bar{
             height: 0.5rem;
             width: 3rem;
             margin: 0.5rem 0;
             background-color:#FF8400;
             border-radius: 10px;
-        }
+        } 
         .navbar{
             position: absolute;
             top: 8rem;
@@ -294,8 +342,8 @@
             background-color: orange;
             transition: 0.2s;
             overflow: hidden;
-        }
-        .navbar.active{
+        }  */
+        /* .navbar.active{
             height: 40vh;
         }
         .navbar ul{
@@ -314,7 +362,7 @@
         }
         .navbar ul li a{
             color: white;
-        }
+        } */
     
         .chiefcontainer{
             padding-top: 20%;

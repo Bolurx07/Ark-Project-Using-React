@@ -21,25 +21,44 @@ import {Link} from 'react-router-dom'
 
 
 const Homepage = () => {
-  const [changeHeader, setChangeHeader] = useState({ head1: "Business Development", head2: "Ark Foundation", head3: "Real Estate", head4: "Investment and Assest Management"})
+    // Usestate for Servicecard component
+    const [changeHeader, setChangeHeader] = useState(
+      { head1: "Business Development", 
+        head2: "Ark Foundation", 
+        head3: "Real Estate", 
+        head4: "Investment and Assest Management"}
+        )
+       
+      // Usestate for Hamburger display
+      const [toggle, setToggle] = useState(false)
+
+      const handleToggle = () => {
+        return setToggle(prevToggle =>!prevToggle)
+      }
+
+
   return (
     <div>
       <header className={homePageStyle.header}>
         <div>
           <img src={logo} alt="logo" />
         </div>
-        <nav className={homePageStyle.navbar}>
+        <nav  className={toggle ? homePageStyle.active : homePageStyle.navbar }>
             <ul>
-                <li><Link to="/" className={homePageStyle.active}>Home</Link></li>
+                <li><Link to="/" >Home</Link></li>
                 <li><Link to="Aboutpage">About Us</Link></li>
                 <li><Link to="Contactpage">Contact Us</Link></li>
                 <li><button className={homePageStyle.navbutton}><Link to="#">Register</Link></button></li>
             </ul>
         </nav>
-        <div id={homePageStyle.hamburger}>
-            <div className={homePageStyle.bar}></div>
-            <div className={homePageStyle.bar}></div>
-            <div className={homePageStyle.bar}></div>
+        <div id={homePageStyle.burger} onClick={handleToggle}>
+            {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
+            {/* <div className={homePageStyle.xbar}>&times;</div>
+            <div id={homePageStyle.hamburger}>
+                <div className={homePageStyle.bar}></div>
+                <div className={homePageStyle.bar}></div>
+                <div className={homePageStyle.bar}></div>
+            </div>  */}
         </div>
       </header>
 
