@@ -133,7 +133,7 @@
         padding-right: 14%;
     }
     .servicecontainer{
-        margin-top: 15%;
+        margin-top: 5%;
         display: flex;
         justify-content: space-evenly;
         padding: 0 20%;
@@ -146,6 +146,13 @@
     .servicecontainer3{
         display: block;
         padding: 10% 0;
+    }
+    .serviceheading{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #402100;
+        width: 12rem;
     }
     #service{
         font-size: 1rem;
