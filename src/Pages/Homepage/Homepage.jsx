@@ -16,6 +16,7 @@ import pic1 from "../../Assets/pic-1.png";
 import pic2 from "../../Assets/pic-2.png";
 import Servicecard from "../../Components/Servicecard/Servicecard";
 import Qualitycard from "../../Components/Qualitycard/Qualitycard";
+import Reviewcard from "../../Components/Reviewcard/Reviewcard";
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
@@ -37,8 +38,9 @@ const Homepage = () => {
         return setToggle(prevToggle =>!prevToggle)
       }
 
-      // Usetate for Qualitycard component
-      const [quality] = useState([{
+      // Usestate for Qualitycard component
+      const [quality] = useState([
+      {
         image: icon1,
         heading: "Quality Service",
         paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -59,11 +61,28 @@ const Homepage = () => {
         paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         position: "top"
       },
-     
     ]
-
-      )
-  return (
+    )
+    // Usestate for Reviewcard component(using const declaration instead of usestate)
+      const review = [
+        {
+          img: pic1,
+          subcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum",
+          name: "Tobiloba K."
+        },
+        {
+          img: pic2,
+          subcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum",
+          name: "Tobiloba K."
+        },
+        {
+          img: pic1,
+          subcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum",
+          name: "Tobiloba K."
+        }
+      ]
+  
+    return (
     <div>
       <header className={homePageStyle.header}>
         <div>
@@ -174,7 +193,11 @@ const Homepage = () => {
         </div>
         <h3 className={homePageStyle.h3}>What People Say About Us.</h3>
         <div className={homePageStyle.aboutuscontainer}>
-            <div>
+          {review.map((item) =>(
+          <Reviewcard img={item.img} subcontent={item.subcontent} name={item.name} />
+          )
+          )}
+            {/* <div>
                 <img src={pic1} alt="pic-1"/>
                 <div className={homePageStyle.aboutuscontent}>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
@@ -194,7 +217,7 @@ const Homepage = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
                     <span className={homePageStyle.span}>Tobiloba K.</span>
                 </div>
-            </div>
+            </div> */}
         </div>
     </section>
     

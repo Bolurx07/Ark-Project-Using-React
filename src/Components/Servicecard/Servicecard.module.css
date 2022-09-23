@@ -6,6 +6,11 @@
     width: 16rem;
     height: 18rem;
 }
+
+.servicediv p{
+    padding: 1rem 0;
+}
+
 .serviceheading{
     font-weight: 700;
     font-size: 24px;
@@ -13,6 +18,7 @@
     color: #402100;
     width: 12rem;
 }
+
 .servicecontent{
     font-weight: 400;
     font-size: 14px;
@@ -21,6 +27,7 @@
     width: 12rem;
     text-align: justify;
 }
+
 .servicebutton{
     width: 8.75rem;
     height: 37px;
@@ -29,15 +36,27 @@
     border-radius: 27.1154px;
 
 }
+
 .servicebutton a{
     text-decoration: none;
     color: white;
 }
+
 .servicebutton a:hover{
     color: black;
     font-weight: bold;
 }
 
 @media screen and (max-width: 400px) {
-
+    .servicediv{
+        width: 14rem;
+    }
+    .serviceheading{
+        font-size: 1rem;
+        width: 9rem;
+    }
+    .servicecontent{
+        font-size: 0.7rem;
+        width: 10rem;
+    }
 }

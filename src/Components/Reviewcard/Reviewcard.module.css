@@ -1,0 +1,41 @@
+.aboutuscontent{
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    width: 17rem;
+    padding: 2rem;
+    border: 1px solid rgb(248, 243, 243);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+}
+.aboutuscontent p{
+    padding: 2rem 0;
+}
+
+.img{
+    position: relative;
+    top: 5rem;
+    left: 3.5rem;
+    z-index: -1;
+}
+
+.span{
+    color: #FF8400;
+}
+
+
+@media screen and (max-width: 400px) {
+    .img{
+        top: 3rem;
+        left: 3rem;
+    }
+    .aboutuscontent{
+        font-size: 0.85rem;
+        width: 14rem;
+        padding: 1rem;
+    }
+    .aboutuscontent p{
+        padding: 0;
+    }
+    
+}
