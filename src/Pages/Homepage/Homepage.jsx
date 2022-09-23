@@ -15,6 +15,7 @@ import icon3 from "../../Assets/icon-3.svg";
 import pic1 from "../../Assets/pic-1.png";
 import pic2 from "../../Assets/pic-2.png";
 import Servicecard from "../../Components/Servicecard/Servicecard";
+import Qualitycard from "../../Components/Qualitycard/Qualitycard";
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
@@ -36,7 +37,32 @@ const Homepage = () => {
         return setToggle(prevToggle =>!prevToggle)
       }
 
+      // Usetate for Qualitycard component
+      const [quality] = useState([{
+        image: icon1,
+        heading: "Quality Service",
+        paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        position: "top"
+      },
+      {
+        image: icon2,
+        heading: "Quality Service",
+        paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        position: "bottom"
+      },
+      {
+        image: icon3,
+        heading: "Quality Service",
+        paragraph1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        paragraph2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        position: "top"
+      },
+     
+    ]
 
+      )
   return (
     <div>
       <header className={homePageStyle.header}>
@@ -123,7 +149,11 @@ const Homepage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
         </div>
         <div className={homePageStyle.h2content} >
-            <div>
+          {quality.map((item) =>(
+          <Qualitycard image={item.image} heading={item.heading} paragraph1={item.paragraph1} paragraph2={item.paragraph2} position={item.position}/>
+     )
+     )}
+            {/* <div>
                 <img src={icon1} alt="icon-1"/>
                 <p className={homePageStyle.h2subcontent}>Quality Service</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
@@ -140,7 +170,7 @@ const Homepage = () => {
                 <p className={homePageStyle.h2subcontent}>Quality Service</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+            </div> */}
         </div>
         <h3 className={homePageStyle.h3}>What People Say About Us.</h3>
         <div className={homePageStyle.aboutuscontainer}>
