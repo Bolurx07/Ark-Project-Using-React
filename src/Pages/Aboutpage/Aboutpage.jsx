@@ -13,11 +13,21 @@ import twitter from "../../Assets/twitter.svg";
 import instagram from "../../Assets/instagram.svg";
 import whitelogo from "../../Assets/whitelogo.svg";
 import {Link} from 'react-router-dom'
+import { useState } from "react";
 import aboutPageStyle from "./Aboutpage.module.css"
 
 
 
 const Aboutpage = () => {
+    // Usestate for Teamcard component
+    const {teamcard1} = useState(
+        {
+            img: teampic1,
+            img: teampic2,
+            img: teampic3
+        }
+    )
+
   return (
     <div>
 
