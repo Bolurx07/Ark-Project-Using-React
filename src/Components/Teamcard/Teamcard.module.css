@@ -1,0 +1,40 @@
+.teamsubcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamsubcontainer p{
+    font-weight: 400;
+    font-size: 1.15rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.23em;
+}
+
+.teamlogos  img{
+    margin: 0.75rem;
+}
+
+.span{
+    color: #FF8400;
+}
+
+
+@media screen and (max-width: 900px) {
+    .teamsubcontainer {
+        margin-bottom: 2rem;
+      }
+      .teamsubcontainer p {
+        font-size: 0.85rem;
+        letter-spacing: 0;
+      }
+      .teampic {
+        width: 8rem;
+      }
+      .teamlogos img {
+        margin: 0.45rem;
+      }
+      .span {
+        font-size: 0.75rem;
+      }
+}

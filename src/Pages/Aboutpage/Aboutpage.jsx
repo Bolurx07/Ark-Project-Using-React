@@ -8,24 +8,28 @@ import teampic3 from "../../Assets/teampic3.svg";
 import teampic4 from "../../Assets/teampic4.svg";
 import teampic5 from "../../Assets/teampic5.svg";
 import teampic6 from "../../Assets/teampic6.svg";
-import linkedin from "../../Assets/linkedin.svg";
-import twitter from "../../Assets/twitter.svg";
-import instagram from "../../Assets/instagram.svg";
 import whitelogo from "../../Assets/whitelogo.svg";
 import {Link} from 'react-router-dom'
 import { useState } from "react";
 import aboutPageStyle from "./Aboutpage.module.css"
+import Teamcard from '../../Components/Teamcard/Teamcard';
 
 
 
 const Aboutpage = () => {
     // Usestate for Teamcard component
-    const {teamcard1} = useState(
-        {
-            img: teampic1,
-            img: teampic2,
-            img: teampic3
-        }
+    const [teamcad] = useState([
+        {img: teampic1},
+        {img: teampic2},
+        {img: teampic3}
+    ]
+    )
+
+    const [teamcar] = useState([
+        {img: teampic4},
+        {img: teampic5},
+        {img: teampic6}
+    ]
     )
 
   return (
@@ -91,68 +95,10 @@ const Aboutpage = () => {
             </div>
             <div className={aboutPageStyle.mainteamcontainer}>
                 <div className={aboutPageStyle.teamcontainer1}>
-                    <div className={aboutPageStyle.teamsubcontainer}>
-                        <img className={aboutPageStyle.teampic} src={teampic1} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
-                    <div className={aboutPageStyle.teamsubcontainer}>
-                        <img className={aboutPageStyle.teampic} src={teampic2} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
-                    <div className={aboutPageStyle.teamsubcontainer}>
-                        <img className={aboutPageStyle.teampic} src={teampic3} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
+                    {teamcad.map((item) =>( <Teamcard img={item.img} />))}   
                 </div>
                 <div className={aboutPageStyle.teamcontainer2}>
-                    <div className={aboutPageStyle.teamsubcontainer}>
-                        <img className={aboutPageStyle.teampic} src={teampic4} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
-                    <div className={aboutPageStyle.teamsubcontainer} >
-                        <img className={aboutPageStyle.teampic} src={teampic5} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
-                    <div className={aboutPageStyle.teamsubcontainer}>
-                        <img className={aboutPageStyle.teampic} src={teampic6} alt="teampic"/>
-                        <p>Kolawole Oluwatobi</p>
-                        <div className={aboutPageStyle.teamlogos}>
-                            <img src={linkedin} alt="linkedin"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={instagram} alt="instagram"/>
-                        </div>
-                        <span className={aboutPageStyle.span}>CEO</span>
-                    </div>
+                    {teamcar.map((item) =>( <Teamcard img={item.img} />))}
                 </div>
             </div>
         </section>

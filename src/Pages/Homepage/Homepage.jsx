@@ -90,7 +90,7 @@ const Homepage = () => {
         </div>
         <nav  className={toggle ? homePageStyle.active : homePageStyle.navbar }>
             <ul>
-                <li><Link to="/" >Home</Link></li>
+                <li id={homePageStyle.home}><Link to="/" >Home</Link></li>
                 <li><Link to="Aboutpage">About Us</Link></li>
                 <li><Link to="Contactpage">Contact Us</Link></li>
                 <li><button className={homePageStyle.navbutton}><Link to="#">Register</Link></button></li>
@@ -98,12 +98,6 @@ const Homepage = () => {
         </nav>
         <div id={homePageStyle.burger} onClick={handleToggle}>
             {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
-            {/* <div className={homePageStyle.xbar}>&times;</div>
-            <div id={homePageStyle.hamburger}>
-                <div className={homePageStyle.bar}></div>
-                <div className={homePageStyle.bar}></div>
-                <div className={homePageStyle.bar}></div>
-            </div>  */}
         </div>
       </header>
 
@@ -163,61 +157,22 @@ const Homepage = () => {
       <img className={homePageStyle.ellipse3} src={ellipse3} alt="ellipse-3"/>
 
     <section>
+
         <div className={homePageStyle.heading2}>
             <h2 className={homePageStyle.h2}>We Are Top Notch At What We Render.</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
         </div>
+
         <div className={homePageStyle.h2content} >
           {quality.map((item) =>(
-          <Qualitycard image={item.image} heading={item.heading} paragraph1={item.paragraph1} paragraph2={item.paragraph2} position={item.position}/>
-     )
-     )}
-            {/* <div>
-                <img src={icon1} alt="icon-1"/>
-                <p className={homePageStyle.h2subcontent}>Quality Service</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div id={homePageStyle.h2special}>
-                <img src={icon2} alt="icon-2"/>
-                <p className={homePageStyle.h2subcontent}>Quality Service</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div>
-                <img src={icon3} alt="icon-3"/>
-                <p className={homePageStyle.h2subcontent}>Quality Service</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div> */}
+          <Qualitycard image={item.image} heading={item.heading} paragraph1={item.paragraph1} paragraph2={item.paragraph2} position={item.position}/>))}   
         </div>
+
         <h3 className={homePageStyle.h3}>What People Say About Us.</h3>
+        
         <div className={homePageStyle.aboutuscontainer}>
           {review.map((item) =>(
-          <Reviewcard img={item.img} subcontent={item.subcontent} name={item.name} />
-          )
-          )}
-            {/* <div>
-                <img src={pic1} alt="pic-1"/>
-                <div className={homePageStyle.aboutuscontent}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span className={homePageStyle.span}>Tobiloba K.</span>
-                </div>
-            </div>
-            <div>
-                <img src={pic2} alt="pic-2"/>
-                <div className={homePageStyle.aboutuscontent}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span className={homePageStyle.span}>Tobiloba K.</span>
-                </div>
-            </div>
-            <div>
-                <img src={pic1} alt="pic-3"/>
-                <div className={homePageStyle.aboutuscontent}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tellus pharetra tristique tristique elementum</p>
-                    <span className={homePageStyle.span}>Tobiloba K.</span>
-                </div>
-            </div> */}
+          <Reviewcard img={item.img} subcontent={item.subcontent} name={item.name} />))}
         </div>
     </section>
     

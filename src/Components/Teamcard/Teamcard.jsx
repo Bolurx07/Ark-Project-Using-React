@@ -1,5 +1,8 @@
 import React from 'react'
-import teamCardStyle from "./Homepage.module.css"
+import teamCardStyle from "./Teamcard.module.css"
+import linkedin from "../../Assets/linkedin.svg";
+import twitter from "../../Assets/twitter.svg";
+import instagram from "../../Assets/instagram.svg";
 
 const Teamcard = ({img}) => {
   return (
