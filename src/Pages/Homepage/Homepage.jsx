@@ -96,7 +96,7 @@ const Homepage = () => {
                 <li><button className={homePageStyle.navbutton}><Link to="#">Register</Link></button></li>
             </ul>
         </nav>
-        <div id={homePageStyle.burger} onClick={handleToggle}>
+        <div id={homePageStyle.hamburger} onClick={handleToggle}>
             {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
         </div>
       </header>

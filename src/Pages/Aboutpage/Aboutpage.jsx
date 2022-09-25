@@ -17,6 +17,13 @@ import Teamcard from '../../Components/Teamcard/Teamcard';
 
 
 const Aboutpage = () => {
+      // Usestate for Hamburger display
+      const [toggle, setToggle] = useState(false)
+
+      const handleToggle = () => {
+        return setToggle(prevToggle =>!prevToggle)
+      }
+
     // Usestate for Teamcard component
     const [teamcad] = useState([
         {img: teampic1},
@@ -40,20 +47,17 @@ const Aboutpage = () => {
                 <div>
                     <img src={whitelogo} alt="logo" />
                 </div>
-                <nav className={aboutPageStyle.navbar}>
-                    <ul>
-                        
-                        <li><Link to="/" className={aboutPageStyle.active}>Home</Link></li>
+                <nav className={toggle ? aboutPageStyle.active : aboutPageStyle.navbar }>
+                    <ul> 
+                        <li id={aboutPageStyle.home}><Link to="/">Home</Link></li>
                         <li><Link to="/Aboutpage">About Us</Link></li>
                         <li><Link to="/Contactpage">Contact Us</Link></li>
                         <li><button className={aboutPageStyle.navbutton}><Link to="#">Register</Link></button></li>
                     </ul>
                 </nav>
-    
-                <div id={aboutPageStyle.hamburger}>
-                    <div className={aboutPageStyle.bar}></div>
-                    <div className={aboutPageStyle.bar}></div>
-                    <div className={aboutPageStyle.bar}></div>
+
+                <div id={aboutPageStyle.hamburger} onClick={handleToggle}>
+                    {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
                 </div>
             </header>
 

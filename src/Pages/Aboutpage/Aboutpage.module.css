@@ -15,22 +15,22 @@
     width: 100%;
     margin-bottom: 2rem;
   }
-  .navbar ul {
+  .topnav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .navbar ul li {
+  .topnav ul li {
     list-style: none;
     padding: 0 1rem;
   }
-  .navbar ul li a {
+  .topnav ul li a {
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
     transition: 0.5s;
   }
-  .navbar ul li a:hover {
+  .topnav ul li a:hover {
     font-size: 1.8rem;
     transition: 1s;
   }
@@ -42,12 +42,12 @@
     border-radius: 27px;
     padding: 0.75rem 2rem;
   }
-  .navbutton:hover {
+  /* .navbutton:hover {
     background-color: white;
   }
   .navbutton a:hover {
     color: black;
-  }
+  } */
   #hamburger {
     display: none;
   }
@@ -202,48 +202,51 @@
     .firstpage{
       height: 100vh;
     }
-    #hamburger {
-      display: block;
-      cursor: pointer;
+    /* Hamburger & Menu dropdown display */
+    #hamburger{
+        display: block;
+        cursor: pointer;
+        font-size: 4rem;
+        color: #FF8400;
+        margin-top: -1rem;
     }
-    .bar {
-      height: 0.5rem;
-      width: 3rem;
-      margin: 0.5rem 0;
-      background-color: #ff8400;
-      border-radius: 10px;
+    .active{
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        width: 100vw;
     }
-    .navbar {
-      position: absolute;
-      top: 8rem;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      height: 0;
-      background-color: black;
-      transition: 0.2s;
-      overflow: hidden;
+    .navbar{
+        display: none;
+    }     
+    .active ul{
+        display: block;
+        height: 70vh;
+        background-color: rgb(63, 59, 56);
+        text-align: center;
+        transition: 0.5s;
+            
     }
-    .navbar.active {
-      height: 40vh;
+    .active ul li{
+        padding: 2rem 0;
+        margin: 0 2rem;
+        border: 4px solid white;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 10px;
+    } 
+    #home{
+        border-top: none;
     }
-    .navbar ul {
-      display: block;
-      width: fit-content;
-      text-align: center;
-      margin: 1rem auto;
-      opacity: 0;
-    }
-    .navbar.active ul {
-      opacity: 1;
-      margin-top: 1rem;
-    }
-    .navbar ul li {
-      padding: 0.8rem 0;
-    }
-    .navbar ul li a {
-      color: white;
-    }
+    
+    /* Removing Hover effect from Mobile screen */
+    @media (hover: hover){
+      .topnav ul li a:hover{
+          font-size: 1.5rem;
+          transition: 0;
+      }
+  }
   
     .headercontainer {
       padding: 3rem 5rem;

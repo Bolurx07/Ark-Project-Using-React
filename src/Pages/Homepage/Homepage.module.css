@@ -1,4 +1,5 @@
     /* Navbar  */
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -7,12 +8,14 @@
     width: 100%;
     margin-bottom: 2rem;
 }
+
 .header ul{
     
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header ul li {
     list-style: none;
     padding: 0 1rem;
@@ -40,13 +43,10 @@
 .navbutton:hover{
     background-color: white;
 }
-
-/* #hamburger{
+#hamburger{
     display: none;
 }
-.xbar{
-    display: none;
-} */
+
 .backgroundpic{
     position: absolute;
     top: -8rem;
@@ -252,11 +252,16 @@
     
     
     @media screen and (max-width: 850px) {
-    
-        #burger{
+
+        /* Hamburger & Menu dropdown display */
+        .header{
+            background-color: rgb(233, 231, 231);
+            position: fixed;
+        }
+        #hamburger{
             display: block;
             cursor: pointer;
-            font-size: 5rem;
+            font-size: 4rem;
             color: #FF8400;
         }
         .active{
@@ -272,7 +277,7 @@
         .active ul{
             display: block;
             height: 70vh;
-            background-color: orange;
+            background-color: rgb(63, 59, 56);
             text-align: center;
             transition: 0.5s;
             
@@ -284,37 +289,33 @@
             border-bottom: none;
             border-left: none;
             border-right: none;
+            border-radius: 10px;
         } 
         #home{
         border-top: none;
         }
 
-        .header{
-            background-color: rgb(233, 231, 231);
-            position: fixed;
-        }
-        .header ul li a:hover{
-           
-            font-size: none;
-            transition: none;
+        /* Removing Hover effect from Mobile screen */
+        @media (hover: hover){
+            .header ul li a:hover{
+                color: white;
+                font-size: 1.5rem;
+                transition: 0;
+            }
+            .navbutton:hover{
+                background-color: orange;
+            } 
         }
         
-        .navbutton:hover{
-            background-color: none;
-        }
-
         .chiefcontainer{
             padding-top: 20%;
         }
-
         .ellipse1{
             display: none;
         }
-
         .backgroundpic, .homepagepic{
             display: none;
         }
-
         .headercontainer{
             display: block;
             align-items: center;
@@ -322,7 +323,6 @@
             max-width: 100%;
             padding: 2.5rem 5rem;
         }
-
         .headercontent{
             padding-right: 0%;
             align-items: center;
@@ -461,8 +461,6 @@
             padding: 0 15%;
             margin-bottom: 3rem;
         }
-        
-        
         footer{
             padding: 1.5rem;
         }
@@ -470,3 +468,5 @@
             font-size: 0.75rem;
         }
     }
+
+    
