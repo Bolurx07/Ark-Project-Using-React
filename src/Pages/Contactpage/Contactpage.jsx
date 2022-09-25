@@ -5,18 +5,26 @@ import visiticon from "../../Assets/visiticon.svg";
 import logoblack from "../../Assets/logoblack.svg";
 import {Link} from 'react-router-dom'
 import contactPageStyle from "./Contactpage.module.css"
+import { useState } from 'react';
 
 
 const Contactpage = () => {
+    // Usestate for Hamburger display
+    const [toggle, setToggle] = useState(false)
+
+    const handleToggle = () => {
+      return setToggle(prevToggle =>!prevToggle)
+    }
+
   return (
     <div>
         <header className={contactPageStyle.myHeader}>
             <div>
                 <img src={logoblack} alt="logo" />
             </div>
-            <nav className={contactPageStyle.navbar}>
-                <ul>
-                   <li><Link to="/" className={contactPageStyle.active}>Home</Link></li>
+            <nav className={toggle ? contactPageStyle.active : contactPageStyle.navbar}>
+                <ul >
+                   <li id={contactPageStyle.home}><Link to="/">Home</Link></li>
                     <li><Link to="/Aboutpage">About Us</Link></li>
                     <li><Link to="/Contactpage">Contact Us</Link></li>
                 </ul>
@@ -25,11 +33,9 @@ const Contactpage = () => {
                 <li><button  className={contactPageStyle.navbutton}><a href="#">Register</a></button></li>
             </ul>
         
-            <div id={contactPageStyle.hamburger}>
-                <div className={contactPageStyle.bar}></div>
-                <div className={contactPageStyle.bar}></div>
-                <div className={contactPageStyle.bar}></div>
-            </div>
+            <div id={contactPageStyle.hamburger} onClick={handleToggle}>
+            {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
+        </div>
         </header>
 
         <section className={contactPageStyle.maincontactcontainer1}>
