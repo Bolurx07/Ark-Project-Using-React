@@ -1,5 +1,4 @@
     /* Navbar  */
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -277,10 +276,9 @@
         .active ul{
             display: block;
             height: 70vh;
-            background-color: rgb(63, 59, 56);
+            background-color: grey;
             text-align: center;
             transition: 0.5s;
-            
         }
         .active ul li{
             padding: 2rem 0;

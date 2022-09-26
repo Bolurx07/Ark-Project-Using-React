@@ -176,8 +176,7 @@ const Homepage = () => {
         </div>
     </section>
     
-    <img className={homePageStyle.ellipse4} src={ellipse2}alt="ellipse-4"></img>
-
+    <img className={homePageStyle.ellipse4} src={ellipse2}alt="ellipse-4"/>
     </div>
   );
 };
