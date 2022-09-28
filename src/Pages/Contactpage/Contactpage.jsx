@@ -83,7 +83,7 @@ const Contactpage = () => {
             <br/><br/>
             <input type="email" id={contactPageStyle.email} name="email" placeholder="Email address"/>
             <br/><br/>
-            <textarea name="message" id={contactPageStyle.message} placeholder="message" rows="20" cols="30"></textarea>
+            <textarea resize='none'  name="message" id={contactPageStyle.message} placeholder="message" rows="20" cols="30"></textarea>
             <br/><br/>
           </form>
         </div>

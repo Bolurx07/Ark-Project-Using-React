@@ -75,7 +75,7 @@ const Aboutpage = () => {
             </div>
             <div className={aboutPageStyle.storysubcontainer2}>
                 <img className={aboutPageStyle.storypic} src={storypic} alt="storypic"/>
-                <img className={aboutPageStyle.dots1} src={dots1} alt="Dotgroup"/>
+                <img className={aboutPageStyle.dot1} src={dots1} alt="Dotgroup"/>
             </div>
         </section>
         <section className={aboutPageStyle.believecontainer}>

@@ -1,4 +1,4 @@
-    /* Navbar  */
+/* Navbar  */
 .header{
     display: flex;
     justify-content: space-between;
@@ -65,92 +65,92 @@
     display: flex;
     
     }
-    .starcontainer{
-        display: flex;
-        flex-direction: column;
-        width: 1rem;
-        padding: 10px 0px;
+.starcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 1rem;
+    padding: 10px 0;
     }
-    .span{
-        color: #FF8400;
+.span{
+    color: #FF8400;
+}
+.h1{
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 4.5rem;
+    width: 23rem;
+    padding-bottom: 1.2rem;
     }
-    .h1{
-        font-weight: 700;
-        font-size: 4.2rem;
-        line-height: 4.5rem;
-        width: 23rem;
-        padding-bottom: 1.2rem;
+.subheader{
+    display: flex;
     }
-    .subheader{
-        display: flex;
+.subheader p{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    width: 300px;
     }
-    .subheader p{
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 22px;
-        width: 300px;
+.headercontainer{
+    display: flex;
+    padding: 2.5rem 10rem;
     }
-    .headercontainer{
-        display: flex;
-        padding: 2.5rem 10rem;
+.ellipse1{
+    position: absolute;
+    top: 13rem;
     }
-    .ellipse1{
-        position: absolute;
-        top: 13rem;
+.headerbutton{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
     }
-    .headerbutton{
-        display: flex;
-        justify-content: space-evenly;
-        padding: 20px;
+.headerbutton1 {
+    width: 122px;
+    height: 37px;
+    border-radius: 25px;
+    background-color: #402100;
+    border: 2px solid #402100 ;
+    font-size: 18px;
     }
-    .headerbutton1 {
-        width: 122px;
-        height: 37px;
-        border-radius: 25px;
-        background-color: #402100;
-        border: 2px solid #402100 ;
-        font-size: 18px;
+.headerbutton2 {
+    width: 120px;
+    height: 37px;
+    border-radius: 25px;
+    background-color: white;
+    border: 2px solid #FF8400;
+    font-size: 18px;
     }
-    .headerbutton2 {
-        width: 120px;
-        height: 37px;
-        border-radius: 25px;
-        background-color: white;
-        border: 2px solid #FF8400;
-        font-size: 18px;
+.headerbutton1 a{
+    text-decoration: none ;
+    color: white;
     }
-    .headerbutton1 a{
-        text-decoration: none ;
-        color: white;
+.headerbutton1 a:hover, .headerbutton2 a:hover{
+    color:orangered;
+    font-weight: bold;
     }
-    .headerbutton1 a:hover, .headerbutton2 a:hover{
-        color:orangered;
-        font-weight: bold;
+.headerbutton2 a{
+    text-decoration: none ;
+    color: black;
     }
-    .headerbutton2 a{
-        text-decoration: none ;
-        color: black;
+.headercontent{
+    padding-right: 14%;
     }
-    .headercontent{
-        padding-right: 14%;
+.servicecontainer{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20%;
     }
-    .servicecontainer{
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0 20%;
-    }
-    .servicecontainer2{
-        display: block;
-        padding: 5% 0;
+.servicecontainer2{
+    display: block;
+    padding: 5% 0;
         
     }
-    .servicecontainer3{
-        display: block;
-        padding: 10% 0;
+.servicecontainer3{
+    display: block;
+    padding: 10% 0;
     }
 
-    .serviceheading{
+.serviceheading{
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -158,51 +158,51 @@
     width: 12rem;
     }
 
-    #service{
-        font-size: 1rem;
+#service{
+    font-size: 1rem;
     }
     
-    .ellipse2{
-        position: absolute;
-        top: 50rem;
+.ellipse2{
+    position: absolute;
+    top: 50rem;
     }
-    .ellipse3{
-        position: absolute;
-        top: 95rem;
-        right: 0;
+.ellipse3{
+    position: absolute;
+    top: 95rem;
+    right: 0;
     }
-    .ellipse4{
-        position: absolute;
-        top: 135rem;
+.ellipse4{
+    position: absolute;
+    top: 135rem;
     }
-    .heading2{
-        text-align: center;
+.heading2{
+    text-align: center;
     }
-    .h2{
-        font-weight: 700;
-        font-size: 2.5rem;
-        line-height: 3rem;
-    }
-    .heading2 p{
-        font-weight: 400;
-        font-size: 1.1rem;
-        line-height: 1.4rem;
-        width: 51rem;
-        margin: 1% auto;
-    }
-    .h2content{
-        display: flex;
-        justify-content: space-evenly;
-        padding: 4rem 15%;
-    }
-    .h2content div{
-        width: 18rem;
-        height: 19rem;
-        text-align: center;
-        padding: 1rem;
-        border: 1px solid rgb(252, 248, 248);
-        border-radius: 28% 42% 45% 38% / 63% 65% 35% 37%;
-        box-shadow: 0px 9.43253px 18.8651px rgba(0, 0, 0, 0.04), 0px 1.88651px 5.65952px rgba(0, 0, 0, 0.04), 0px 0px 0.943253px rgba(0, 0, 0, 0.04);
+.h2{
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    }   
+.heading2 p{
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    width: 51rem;
+    margin: 1% auto;
+    }   
+.h2content{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem 15%;
+    }   
+.h2content div{
+    width: 18rem;
+    height: 19rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgb(252, 248, 248);
+    border-radius: 28% 42% 45% 38% / 63% 65% 35% 37%;
+    box-shadow: 0px 9.43253px 18.8651px rgba(0, 0, 0, 0.04), 0px 1.88651px 5.65952px rgba(0, 0, 0, 0.04), 0px 0px 0.943253px rgba(0, 0, 0, 0.04);
     
     }
     .h2content div p {
@@ -283,11 +283,9 @@
         .active ul li{
             padding: 2rem 0;
             margin: 0 2rem;
-            border: 4px solid white;
-            border-bottom: none;
-            border-left: none;
-            border-right: none;
             border-radius: 10px;
+            border-top: 4px solid white;
+           
         } 
         #home{
         border-top: none;
