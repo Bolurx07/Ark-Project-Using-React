@@ -4,11 +4,19 @@
     line-height: 24px;
 }
 
-/* Styling strictly for position parameter in my usestate */
+/* Strictly for the position parameter in my usestate */
 .top{
     margin-top: 0;
 }
 
 .bottom{
-    margin-top: 4rem
+    margin-top: 4rem;
+}
+
+
+/* Media query */
+@media screen and (max-width: 850px) {
+    .bottom{
+        margin-bottom: 4rem;
+    }
 }

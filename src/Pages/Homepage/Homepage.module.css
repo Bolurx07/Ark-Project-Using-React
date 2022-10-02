@@ -193,6 +193,7 @@
 .h2content{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 4rem 15%;
     }   
 .h2content div{
@@ -219,6 +220,7 @@
     .aboutuscontainer{
         display: flex;
         justify-content: space-evenly;
+        flex-wrap: wrap;
         padding: 0 10rem;
         margin-bottom: 5rem;
     }
@@ -299,7 +301,7 @@
                 transition: 0;
             }
             .navbutton:hover{
-                background-color: orange;
+                background-color: grey;
             } 
         }
         

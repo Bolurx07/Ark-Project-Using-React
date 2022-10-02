@@ -202,6 +202,11 @@
     left: 21rem;
     z-index: -1;
 }
+.believediv1 {
+  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
+}
 }
 
 
@@ -296,11 +301,6 @@
     .believecontainer {
       display: block;
       background: linear-gradient(to bottom, #ffffff 15%, #f8e7cc 85%);
-    }
-    .believediv1 {
-      margin: 0 auto;
-      width: 20rem;
-      height: 20rem;
     }
     .dot2 {
       display: none;

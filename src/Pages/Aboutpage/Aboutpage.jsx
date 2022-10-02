@@ -80,7 +80,7 @@ const Aboutpage = () => {
         </section>
         <section className={aboutPageStyle.believecontainer}>
             <div>
-            <img className={aboutPageStyle.dot2} src={dots2} alt="Dotgroup"/>
+                <img className={aboutPageStyle.dot2} src={dots2} alt="Dotgroup"/>
                 <div className={aboutPageStyle.believediv1}>
                     <p className={aboutPageStyle.divcontent1}>--- We believe in</p>
                     <p className={aboutPageStyle.divcontent2}>insert company's tagline here”.</p>
