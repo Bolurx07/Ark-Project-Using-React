@@ -5,16 +5,69 @@ import visiticon from "../../Assets/visiticon.svg";
 import logoblack from "../../Assets/logoblack.svg";
 import {Link} from 'react-router-dom'
 import contactPageStyle from "./Contactpage.module.css"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Contactpage = () => {
+
+
     // Usestate for Hamburger display
     const [toggle, setToggle] = useState(false)
 
     const handleToggle = () => {
       return setToggle(prevToggle =>!prevToggle)
     }
+
+    
+
+       
+
+        // Form Validation
+        const initialValues = {name: "", email: "", message: ""};
+        const [formValues, setFormValues] = useState(initialValues);
+        const [formErrors, setFormErrors] = useState({});
+        const [isSubmit, setIsSubmit] = useState(false);
+
+        // const submitError = document.getElementById('removeerror')
+
+        const handleChange = (e) => {
+            const { name, value } = e.target;
+            setFormValues({...formValues, [name]: value});
+        };
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            setFormErrors(validate(formValues));
+            setIsSubmit(true)
+        };
+
+        useEffect(() => {
+            console.log(formErrors);
+            if (Object.keys(formErrors).length === 0 && isSubmit) {
+                console.log(formValues);
+            }
+        }, [formErrors]);
+
+        const validate = (values) => {
+            const errors = {}
+            const regexMail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+            if(!values.name){
+                errors.name = "Name is required";
+            }
+            if(!values.email){
+                errors.email = "Email is required";
+            } else if (!regexMail.test(values.email)) {
+                errors.email = "Email is not valid";
+            }
+            if(!values.message){
+                errors.message = "Message is required";
+            } else if (values.message.length < 20) {
+                errors.message = "Message must be longer than 20";
+            }
+            return errors;
+        };
+
+        // submitError.style.display = 'none';
 
   return (
     <div>
@@ -78,20 +131,35 @@ const Contactpage = () => {
         <h2 className={contactPageStyle.h2}>Get In Touch</h2>
         <p className={contactPageStyle.formheading}>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         <div className={contactPageStyle.formcontainer}>
-          <form action="action_page.php">
-            <input type="text" id={contactPageStyle.name} name="name" placeholder="Name"/>
-            <br/><br/>
-            <input type="email" id={contactPageStyle.email} name="email" placeholder="Email address"/>
-            <br/><br/>
-            <textarea resize='none'  name="message" id={contactPageStyle.message} placeholder="message" rows="20" cols="30"></textarea>
-            <br/><br/>
-          </form>
-        </div>
-        <div className={contactPageStyle.buttonholder}>
-            <input id={contactPageStyle.button} type="submit" value="Submit"/>
+            {/* Contact Form */}
+            <form  onSubmit={handleSubmit} >
+                <div>
+                    <input type="text" id={contactPageStyle.name} name="name" placeholder="Name" value={formValues.name} onChange={handleChange}/>
+                    <span>{formErrors.name}</span>
+
+                </div>
+                <br/><br/>
+                <div>
+                    <input type="email" id={contactPageStyle.email} name="email" placeholder="Email address" value={formValues.email} onChange={handleChange} />
+                    <span> {formErrors.email}</span>
+                </div>
+                <br/><br/>
+                <div>
+                    <textarea resize='none'  name="message" id={contactPageStyle.message} placeholder="message" rows="20" cols="30" minLength={10} value={formValues.message} onChange={handleChange}></textarea>
+                    <span>{formErrors.message}</span>
+
+                </div>
+                <br/><br/>
+                <div className={contactPageStyle.buttonholder}>
+                    <button id={contactPageStyle.button} type="submit" value="submit" >Submit</button>
+                </div>
+                {/* Form submission Error Display */}
+                <div>
+                    {Object.keys(formErrors).length === 0 && isSubmit ? (<div>Form Submitted</div>) : (<div id={contactPageStyle.removeerror}>Fill in the required details above</div>)}
+                </div>
+            </form>
         </div>
     </section>
-
     </div>
   )
 }

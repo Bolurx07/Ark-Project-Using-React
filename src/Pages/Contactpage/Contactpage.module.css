@@ -163,6 +163,23 @@ input{
 .buttonholder{
     text-align: center;
 }
+/* .input-group span{
+    color: red;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+#submit-error{
+    color: red;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.input-group span i{
+    color: seagreen;
+} */
+
 
 
 
