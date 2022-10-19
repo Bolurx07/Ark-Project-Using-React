@@ -11,6 +11,11 @@
     letter-spacing: 0.23em;
 }
 
+.teamlogos{
+  display: flex;
+  justify-content: center;
+}
+
 .teamlogos  img{
     margin: 0.75rem;
 }

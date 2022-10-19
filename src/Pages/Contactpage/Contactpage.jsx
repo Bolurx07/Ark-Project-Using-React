@@ -154,7 +154,7 @@ const Contactpage = () => {
                     <button id={contactPageStyle.button} type="submit" value="submit" >Submit</button>
                 </div>
                 {/* Form submission Error Display */}
-                <div>
+                <div className={contactPageStyle.submiterror}>
                     {Object.keys(formErrors).length === 0 && isSubmit ? (<div>Form Submitted</div>) : (<div id={contactPageStyle.removeerror}>Fill in the required details above</div>)}
                 </div>
             </form>

@@ -1,4 +1,7 @@
-
+.carousel .control-dots{
+  color: red;
+  width: 12rem;
+}
 .firstpage{
     background-color: #FF8400;
     background-image: url('../../Assets/aboutpagepic.png');

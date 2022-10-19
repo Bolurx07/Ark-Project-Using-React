@@ -13,6 +13,8 @@ import {Link} from 'react-router-dom'
 import { useState } from "react";
 import aboutPageStyle from "./Aboutpage.module.css"
 import Teamcard from '../../Components/Teamcard/Teamcard';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import { Carousel } from 'react-responsive-carousel';
 
 
 
@@ -98,12 +100,33 @@ const Aboutpage = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
             </div>
             <div className={aboutPageStyle.mainteamcontainer}>
-                <div className={aboutPageStyle.teamcontainer1}>
-                    {teamcad.map((item) =>( <Teamcard img={item.img} />))}   
-                </div>
-                <div className={aboutPageStyle.teamcontainer2}>
-                    {teamcar.map((item) =>( <Teamcard img={item.img} />))}
-                </div>
+                <Carousel  autoPlay='true'>
+                    <div>
+                        <div className={aboutPageStyle.teamcontainer1}>
+                            {teamcad.map((item) =>( <Teamcard img={item.img} />))}   
+                        </div>
+                        <div className={aboutPageStyle.teamcontainer2}>
+                            {teamcar.map((item) =>( <Teamcard img={item.img} />))}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={aboutPageStyle.teamcontainer1}>
+                            {teamcad.map((item) =>( <Teamcard img={item.img} />))}   
+                        </div>
+                        <div className={aboutPageStyle.teamcontainer2}>
+                            {teamcar.map((item) =>( <Teamcard img={item.img} />))}
+                        </div>
+                    </div>
+                    <div>
+                        <div className={aboutPageStyle.teamcontainer1}>
+                            {teamcad.map((item) =>( <Teamcard img={item.img} />))}   
+                        </div>
+                        <div className={aboutPageStyle.teamcontainer2}>
+                            {teamcar.map((item) =>( <Teamcard img={item.img} />))}
+                        </div>
+                    </div>
+
+                </Carousel>
             </div>
         </section>
 

@@ -157,23 +157,31 @@ input{
     width: 138.49px;
     height: 2.75rem;
     font-size: 1.25rem;
-    margin: 3rem auto;
+    margin: 1.5rem auto 1rem auto;
     padding: 0;
 }
 .buttonholder{
     text-align: center;
 }
-/* .input-group span{
+
+.formcontainer span{
     color: red;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    position: relative;
+    bottom: 3rem;
+    left: 63rem;
+
 }
 
-#submit-error{
+.submiterror{
     color: red;
     text-align: center;
     margin-bottom: 1.5rem;
+
+}
+/* .input-group span{
+}
+
+#submit-error{
 }
 
 .input-group span i{
