@@ -323,10 +323,12 @@
       width: 100%;
       margin: 0 auto;
     }
-    .teamcontainer1,
-    .teamcontainer2 {
+    .teamcontainer1{
       display: block;
       margin: 2rem auto;
+    }
+    .teamcontainer2{
+      display: none;
     }
     .mainteamcontainer {
       display: flex;
