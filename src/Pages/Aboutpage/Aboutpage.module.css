@@ -333,6 +333,9 @@
     .mainteamcontainer {
       display: flex;
     }
+    .carousell{
+      width: 80vw;
+    }
 }
 
 @media screen and (max-width: 450px) {

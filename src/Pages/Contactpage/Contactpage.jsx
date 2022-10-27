@@ -39,6 +39,7 @@ const Contactpage = () => {
             e.preventDefault();
             setFormErrors(validate(formValues));
             setIsSubmit(true)
+            setFormValues('')
         };
 
         useEffect(() => {

@@ -9,5 +9,8 @@
 }
 
 
-
+.carousel .control-dots .dot {
+ 
+  background-color: #FF8400 !important;
+}
 

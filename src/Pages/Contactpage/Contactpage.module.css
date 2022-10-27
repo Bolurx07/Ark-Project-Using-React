@@ -137,19 +137,23 @@ body{
 }
 .formcontainer{
     margin-top: 7rem;
+    position: relative;
 }
 #name, #email, #message{
     border-left: none;
     border-top: none;
     border-right: none;
-    width: 100%
+    width: 100%;
+    z-index: -1;
 }
 #message{
     resize: none;
+    padding: 2rem 1rem;
 }
-input{
-    padding: 2rem 0;
+.formcontainer input{
+    padding: 2rem 1rem;
 }
+
 #button{
     color: white;
     background-color:#402100;
@@ -166,9 +170,9 @@ input{
 
 .formcontainer span{
     color: red;
-    position: relative;
-    bottom: 3rem;
-    left: 63rem;
+    position: absolute;
+    right: 1rem;
+
 
 }
 
@@ -178,15 +182,7 @@ input{
     margin-bottom: 1.5rem;
 
 }
-/* .input-group span{
-}
 
-#submit-error{
-}
-
-.input-group span i{
-    color: seagreen;
-} */
 
 
 
@@ -197,6 +193,7 @@ input{
         position: fixed;
         top: 0;
         background-color: rgb(233, 231, 231);
+        z-index: 1;
     }
     #hamburger{
         display: block;
