@@ -21,7 +21,7 @@ const Footer = () => {
         <div className={footerStyle.footercontainer2}>
             <div className={footerStyle.footersubcontainer1}>
                 <p id={footerStyle.footerheading}>Explore</p>
-                <a href="#">Business Development</a>
+                <Link to='./Businessdev'>Business Development</Link>
                 <a href="#">Real Estate</a>
                 <a href="#">Ark Foundation</a>
                 <a href="#">Investment and Assest Management</a>

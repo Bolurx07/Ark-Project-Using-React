@@ -11,12 +11,13 @@ import Businessdev from './Pages/Businessdevelopment/Businessdev';
 function App() {
   return (
     <div>
-      <Businessdev />
-      {/* <Routes>
+      
+      <Routes>
         <Route path='/' element={<Homepage/>}/>
         <Route path='Aboutpage' element={<Aboutpage/>} />
         <Route path='Contactpage' element={<Contactpage/>} />
-      </Routes> */}
+        <Route path='Businessdev' element={<Businessdev/>} />
+      </Routes>
       <Footer/>
       {/* <Homepage/>
       <Aboutpage/>

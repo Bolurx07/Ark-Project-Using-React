@@ -4,6 +4,7 @@ import bizdevpic from "../../Assets/bizdev1.svg"
 import bizdevicon from "../../Assets/bizdev-icon.svg"
 
 
+
 const Businessdev = () => {
   return (
     <div>
