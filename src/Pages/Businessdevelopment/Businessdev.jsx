@@ -1,6 +1,7 @@
 import React from 'react'
 import bizdevStyle from "./Businessdev.module.css"
-import bizdevpic from "../../Assets/bizdev1.svg"
+import bizdevpic1 from "../../Assets/bizdev1.svg"
+import bizdevpic2 from "../../Assets/bizdev2.svg"
 import bizdevicon from "../../Assets/bizdev-icon.svg"
 
 
@@ -18,7 +19,7 @@ const Businessdev = () => {
             <h2 className={bizdevStyle.heading2}>Why Business Development is Important to Your Business Growth</h2>
           
             <div>
-                <img className={bizdevStyle.hero2pic} src={bizdevpic} alt="bizdevpic" />
+                <img className={bizdevStyle.hero2pic} src={bizdevpic1} alt="bizdevpic" />
                 <p className={bizdevStyle.hero2content}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur faucibus leo nascetur feugiat. Amet eleifend tincidunt morbi odio. 
                     Mus id eget sagittis imperdiet ac nulla arcu sagittis, accumsan. Quam facilisis ultrices ultricies nec nisl in nulla risus. In suspendisse non, nam suspendisse est ut.
@@ -39,8 +40,36 @@ const Businessdev = () => {
 
         <section className={bizdevStyle.hero3}>
             <h3 className={bizdevStyle.heading2}>We provide the following services for business</h3>
-            <div>
-                <div>
+            <div className={bizdevStyle.hero3container}>
+                <div className={bizdevStyle.hero3maindiv}>
+                    <div className={bizdevStyle.hero3div}>
+                        <div className={bizdevStyle.hero3flex}>
+                            <img src={bizdevicon} alt="bizdevicon" />
+                            <p className={bizdevStyle.hero3subheading}>Lorem ipsum dolor</p>
+                        </div>
+                        <p className={bizdevStyle.hero3subcontent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur.</p>
+                    </div>
+                    <div className={bizdevStyle.hero3div}>
+                        <div className={bizdevStyle.hero3flex}>
+                            <img src={bizdevicon} alt="bizdevicon" />
+                            <p className={bizdevStyle.hero3subheading}>Lorem ipsum dolor</p>
+                        </div>
+                        <p className={bizdevStyle.hero3subcontent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur.</p>
+                    </div>
+                    <div className={bizdevStyle.hero3div}>
+                        <div className={bizdevStyle.hero3flex}>
+                            <img src={bizdevicon} alt="bizdevicon" />
+                            <p className={bizdevStyle.hero3subheading}>Lorem ipsum dolor</p>
+                        </div>
+                        <p className={bizdevStyle.hero3subcontent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur.</p>
+                    </div>
+                    <div className={bizdevStyle.hero3div}>
+                        <div className={bizdevStyle.hero3flex}>
+                            <img src={bizdevicon} alt="bizdevicon" />
+                            <p className={bizdevStyle.hero3subheading}>Lorem ipsum dolor</p>
+                        </div>
+                        <p className={bizdevStyle.hero3subcontent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur.</p>
+                    </div>
                     <div className={bizdevStyle.hero3div}>
                         <div className={bizdevStyle.hero3flex}>
                             <img src={bizdevicon} alt="bizdevicon" />
@@ -49,6 +78,7 @@ const Businessdev = () => {
                         <p className={bizdevStyle.hero3subcontent}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in vitae nascetur.</p>
                     </div>
                 </div>
+                <img className={bizdevStyle.bizdevpic} src={bizdevpic2} alt="bizdevpic"  />
             </div>
         </section>
     </div>

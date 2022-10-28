@@ -47,9 +47,22 @@
     margin: 2rem 4rem;
 }
 
+.hero3container{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    padding: 2rem;
+    margin-bottom: 6rem;
+}
+
+.hero3maindiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .hero3flex{
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -68,4 +81,8 @@
     line-height: 1rem;
     margin-left: 4.5rem;
     width: 22rem;
+}
+.bizdevpic{
+    padding-bottom: 11rem;
+    padding-right: 8rem;
 }
