@@ -25,7 +25,6 @@
     transition: 0.5s;
 }
 .header ul li a:hover{
-    color: black;
     font-size: 1.8rem;
     transition: 1s;
 }
@@ -38,9 +37,6 @@
     padding: 0.75rem 2rem;
 }
 
-.navbutton:hover{
-    background-color: white;
-}
 #hamburger{
     display: none;
 }
@@ -87,7 +83,7 @@
     }
 
     /* Removing Hover effect from Mobile screen */
-    @media (hover: hover){
+    /* @media (hover: hover){
         .header ul li a:hover{
             color: white;
             font-size: 1.5rem;
@@ -96,5 +92,5 @@
         .navbutton:hover{
             background-color: grey;
         } 
-    }
+    } */
 }
