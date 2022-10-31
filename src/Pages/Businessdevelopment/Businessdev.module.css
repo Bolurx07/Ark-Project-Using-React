@@ -1,20 +1,22 @@
 .hero{
     background-image: url('../../Assets/bizdevbackground.svg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-blend-mode: overlay;
     background-color: rgba(255, 132, 0, 0.363);
-    padding: 17rem 5rem;
+    /* padding: 17rem 5rem; */
+    
    
 }
 
 .heading{
     color: rgb(255, 255, 255);
-    font-style: Bolder;
-    font-size: 3rem;
+    font-style: Bold;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 3.5rem;
     text-align: center;
+    padding: 8rem 2rem 16rem 2rem;
 }
 
 .hero2{

@@ -3,7 +3,8 @@ import bizdevStyle from "./Businessdev.module.css"
 import bizdevpic1 from "../../Assets/bizdev1.svg"
 import bizdevpic2 from "../../Assets/bizdev2.svg"
 import bizdevicon from "../../Assets/bizdev-icon.svg"
-
+import Headertwo from '../../Components/Headertwo/Headertwo'
+import blacklogo from "../../Assets/logoblack.svg";
 
 
 const Businessdev = () => {
@@ -11,6 +12,9 @@ const Businessdev = () => {
     <div>
 
         <section className={bizdevStyle.hero}>
+            <div>
+            <Headertwo logo={blacklogo} />
+            </div>
             <h1 className={bizdevStyle.heading}>Opportunities don't happen. Let's create them for your business.</h1>
         </section>
 

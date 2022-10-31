@@ -1,9 +1,9 @@
 import React from 'react'
-import head2Style from "./Headerone.module.css"
+import head2Style from "./Headertwo.module.css"
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
-const Headertwo = () => {
+const Headertwo = ({logo}) => {
 
     // Usestate for Hamburger display
     const [toggle, setToggle] = useState(false)
@@ -15,19 +15,21 @@ const Headertwo = () => {
   return (
     <div>
         <header className={head2Style.header}>
-            <div>
-                <img src={logoblack} alt="logo" />
+            <div className={head2Style.imglogo} >
+                <img src={logo} alt="logo" />
             </div>
-            <nav className={toggle ? head2Style.active : head2Style.navbar}>
-                <ul >
-                   <li id={head2Style.home}><Link to="/">Home</Link></li>
-                    <li><Link to="/Aboutpage">About Us</Link></li>
-                    <li><Link to="/Contactpage">Contact Us</Link></li>
-                </ul>
-            </nav>
-            <ul>
-                <li><button  className={head2Style.navbutton}><a href="#">Register</a></button></li>
-            </ul>
+            <div className={toggle ? head2Style.active : head2Style.navbar}>
+              <nav className={head2Style.mininav}>
+                  <ul >
+                      <li id={head2Style.home}><Link to="/">Home</Link></li>
+                      <li><Link to="/Aboutpage">About Us</Link></li>
+                      <li><Link to="/Contactpage">Contact Us</Link></li>
+                  </ul>
+              </nav>
+              <ul>
+                  <li><button  className={head2Style.navbutton}><a href="#">Register</a></button></li>
+              </ul>
+            </div>
         
             <div id={head2Style.hamburger} onClick={handleToggle}>
             {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
