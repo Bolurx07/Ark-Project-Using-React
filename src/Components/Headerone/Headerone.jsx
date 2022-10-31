@@ -22,7 +22,7 @@ const Headerone = ({mainlogo, autoride}) => {
               <ul>
                   <li id={head1Style.home}><Link to="/" >Home</Link></li>
                   <li><Link to="Aboutpage">About Us</Link></li>
-                  <li><Link to="Contactpage">Contact Us</Link></li>
+                  <li><Link to="/Contactpage">Contact Us</Link></li>
                   <li><button className={head1Style.navbutton}><Link to="#">Register</Link></button></li>
               </ul>
           </nav>
