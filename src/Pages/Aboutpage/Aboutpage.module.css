@@ -10,7 +10,7 @@
     background-size: 50% 100%;        
 }
 
-.topnav {
+/* .topnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,10 +50,10 @@
   }
   .navbutton a:hover {
     color: black;
+    #hamburger {
+      display: none;
+    } 
   } */
-  #hamburger {
-    display: none;
-  }
 
 .headercontainer{
     width: 30rem;
@@ -214,51 +214,25 @@
 
 
 @media screen and (max-width: 900px) {
+
     .firstpage{
       height: 100vh;
     }
-    /* Hamburger & Menu dropdown display */
-    #hamburger{
-        display: block;
-        cursor: pointer;
-        font-size: 4rem;
-        color: #FF8400;
-        margin-top: -1rem;
-    }
-    .active{
-        position: absolute;
-        top: 8rem;
-        left: 0;
-        width: 100vw;
-    }
-    .navbar{
-        display: none;
-    }     
-    .active ul{
-        display: block;
-        height: 70vh;
-        background-color: grey;
-        text-align: center;
-        transition: 0.5s;
-            
-    }
-    .active ul li{
-        padding: 2rem 0;
-        margin: 0 2rem;
-        border-top: 4px solid white;
-        border-radius: 10px;
-    } 
-    #home{
-        border-top: none;
+
+    /* Props from Headerone component used 
+    to overide the bckgrnd color & position of the navbar */
+    #autoride{
+      background-color: rgba(233, 231, 231, 0);
+      position: relative;    
     }
     
     /* Removing Hover effect from Mobile screen */
-    @media (hover: hover){
+     /* @media (hover: hover){
       .topnav ul li a:hover{
           font-size: 1.5rem;
           transition: 0;
       }
-  }
+  }   */
   
     .headercontainer {
       padding: 3rem 5rem;

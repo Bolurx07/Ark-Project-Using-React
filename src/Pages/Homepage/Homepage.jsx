@@ -1,5 +1,5 @@
 import React from "react";
-import homePageStyle from "./Homepage.module.css" 
+import homePageStyle from "./Homepage.module.css"; 
 import logo from "../../Assets/logo.png";
 import backgroundpic from "../../Assets/background-pic.svg";
 import star1 from "../../Assets/star-1.svg";
@@ -31,13 +31,6 @@ const Homepage = () => {
         head3: "Real Estate", 
         head4: "Investment and Assest Management"}
         )
-       
-      // Usestate for Hamburger display
-      // const [toggle, setToggle] = useState(false)
-
-      // const handleToggle = () => {
-      //   return setToggle(prevToggle =>!prevToggle)
-      // }
 
       // Usestate for Qualitycard component
       const [quality] = useState([
@@ -85,24 +78,11 @@ const Homepage = () => {
   
     return (
     <div>
-      <Headerone mainlogo={logo} />
-      {/* <header className={homePageStyle.header}>
-        <div>
-          <img src={logo} alt="logo" />
-        </div>
-        <nav  className={toggle ? homePageStyle.active : homePageStyle.navbar }>
-            <ul>
-                <li id={homePageStyle.home}><Link to="/" >Home</Link></li>
-                <li><Link to="Aboutpage">About Us</Link></li>
-                <li><Link to="Contactpage">Contact Us</Link></li>
-                <li><button className={homePageStyle.navbutton}><Link to="#">Register</Link></button></li>
-            </ul>
-        </nav>
-        <div id={homePageStyle.hamburger} onClick={handleToggle}>
-            {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
-        </div>
-      </header> */}
 
+      {/* Navbar  */}
+      <Headerone mainlogo={logo} />
+      
+      {/* Hero Section */}
       <img className={homePageStyle.backgroundpic} src={backgroundpic} alt="background-pic" />
       <section className={homePageStyle.chiefcontainer}>
         <div>
@@ -141,11 +121,14 @@ const Homepage = () => {
 
       <img className={homePageStyle.ellipse2} src={ellipse2} alt="ellipse-2" />
 
+      {/* Service Section */}
       <section className={homePageStyle.servicecontainer}>
         <div className={homePageStyle.servicecontainer1}>
           <span className={homePageStyle.span} id={homePageStyle.service}>Services</span>
           <p className={homePageStyle.serviceheading}>Top Notch Business</p>
         </div>
+
+        {/* Servicecard Components */}
         <div className={homePageStyle.servicecontainer2}>
           <Servicecard heading={changeHeader.head1}/> 
           <Servicecard heading={changeHeader.head2}/>
@@ -158,6 +141,7 @@ const Homepage = () => {
 
       <img className={homePageStyle.ellipse3} src={ellipse3} alt="ellipse-3"/>
 
+      {/* Last Section */}
     <section>
 
         <div className={homePageStyle.heading2}>
@@ -165,6 +149,7 @@ const Homepage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
         </div>
 
+        {/* Qualitycard Component */}
         <div className={homePageStyle.h2content} >
           {quality.map((item) =>(
           <Qualitycard image={item.image} heading={item.heading} paragraph1={item.paragraph1} paragraph2={item.paragraph2} position={item.position}/>))}   
@@ -172,6 +157,7 @@ const Homepage = () => {
 
         <h3 className={homePageStyle.h3}>What People Say About Us.</h3>
         
+        {/* Reviewcard Components */}
         <div className={homePageStyle.aboutuscontainer}>
           {review.map((item) =>(
           <Reviewcard img={item.img} subcontent={item.subcontent} name={item.name} />))}

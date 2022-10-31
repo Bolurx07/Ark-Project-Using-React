@@ -13,18 +13,13 @@ import {Link} from 'react-router-dom'
 import { useState } from "react";
 import aboutPageStyle from "./Aboutpage.module.css"
 import Teamcard from '../../Components/Teamcard/Teamcard';
+import Headerone from "../../Components/Headerone/Headerone";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
 
 
 
 const Aboutpage = () => {
-      // Usestate for Hamburger display
-      const [toggle, setToggle] = useState(false)
-
-      const handleToggle = () => {
-        return setToggle(prevToggle =>!prevToggle)
-      }
 
     // Usestate for Teamcard component
     const [teamcad] = useState([
@@ -43,9 +38,11 @@ const Aboutpage = () => {
 
   return (
     <div>
+         <section className={aboutPageStyle.firstpage}>
+        {/* Navbar Component */}
+        <Headerone mainlogo={whitelogo} autoride={aboutPageStyle.autoride}/>
 
-        <section className={aboutPageStyle.firstpage}>
-            <header className={aboutPageStyle.topnav}>
+           {/* <header className={aboutPageStyle.topnav}>
                 <div>
                     <img src={whitelogo} alt="logo" />
                 </div>
@@ -61,7 +58,7 @@ const Aboutpage = () => {
                 <div id={aboutPageStyle.hamburger} onClick={handleToggle}>
                     {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
                 </div>
-            </header>
+            </header> */}
 
             <div className={aboutPageStyle.headercontainer}>
                 <h1 className={aboutPageStyle.h1}>We Put Our Customer first</h1>

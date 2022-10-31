@@ -41,7 +41,7 @@
     display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
 
     /* Hamburger & Menu dropdown display */
     .header{
