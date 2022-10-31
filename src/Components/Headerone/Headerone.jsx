@@ -3,7 +3,7 @@ import head1Style from "./Headerone.module.css"
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
-const Headerone = ({logo}) => {
+const Headerone = ({mainlogo}) => {
 
      // Usestate for Hamburger display
      const [toggle, setToggle] = useState(false)
@@ -16,7 +16,7 @@ const Headerone = ({logo}) => {
     <div>
         <header className={head1Style.header}>
         <div>
-          <img src={logo} alt="logo" />
+          <img src={mainlogo} alt="logo" />
         </div>
         <nav  className={toggle ? head1Style.active : head1Style.navbar }>
             <ul>

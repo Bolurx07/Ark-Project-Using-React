@@ -1,5 +1,5 @@
 /* Navbar  */
-.header{
+/* .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +44,7 @@
 }
 #hamburger{
     display: none;
-}
+} */
 
 .backgroundpic{
     position: absolute;
@@ -234,9 +234,7 @@
     .aboutuscontainer div {
         border-top: none;
     }
-    #burger{
-        display: none;
-    }
+ 
 
     @media screen and (max-width: 1125px) {
         .headercontent span {
@@ -255,7 +253,7 @@
     @media screen and (max-width: 850px) {
 
         /* Hamburger & Menu dropdown display */
-        .header{
+        /* .header{
             background-color: rgb(233, 231, 231);
             position: fixed;
         }
@@ -291,10 +289,10 @@
         } 
         #home{
         border-top: none;
-        }
+        } */
 
         /* Removing Hover effect from Mobile screen */
-        @media (hover: hover){
+        /* @media (hover: hover){
             .header ul li a:hover{
                 color: white;
                 font-size: 1.5rem;
@@ -303,7 +301,7 @@
             .navbutton:hover{
                 background-color: grey;
             } 
-        }
+        } */
         
         .chiefcontainer{
             padding-top: 20%;

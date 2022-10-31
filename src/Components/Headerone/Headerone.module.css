@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.header ul{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul li {
+    list-style: none;
+    padding: 0 1rem;
+}
+.header ul li a{
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.header ul li a:hover{
+    color: black;
+    font-size: 1.8rem;
+    transition: 1s;
+}
+
+.navbutton{
+    background-color:rgb(248, 128, 0, 0);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border: 1px solid white;
+    border-radius: 27px;
+    padding: 0.75rem 2rem;
+}
+
+.navbutton:hover{
+    background-color: white;
+}
+#hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    /* Hamburger & Menu dropdown display */
+    .header{
+        background-color: rgb(233, 231, 231);
+        position: fixed;
+    }
+    #hamburger{
+        display: block;
+        cursor: pointer;
+        font-size: 4rem;
+        color: #FF8400;
+    }
+    .active{
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        width: 100vw;
+    }
+    .navbar{
+        display: none;
+    } 
+    
+    .active ul{
+        display: block;
+        height: 70vh;
+        background-color: grey;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .active ul li{
+        padding: 2rem 0;
+        margin: 0 2rem;
+        border-radius: 10px;
+        border-top: 4px solid white;
+       
+    } 
+    #home{
+    border-top: none;
+    }
+
+    /* Removing Hover effect from Mobile screen */
+    @media (hover: hover){
+        .header ul li a:hover{
+            color: white;
+            font-size: 1.5rem;
+            transition: 0;
+        }
+        .navbutton:hover{
+            background-color: grey;
+        } 
+    }
+}

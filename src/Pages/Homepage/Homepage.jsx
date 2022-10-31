@@ -17,8 +17,9 @@ import pic2 from "../../Assets/pic-2.png";
 import Servicecard from "../../Components/Servicecard/Servicecard";
 import Qualitycard from "../../Components/Qualitycard/Qualitycard";
 import Reviewcard from "../../Components/Reviewcard/Reviewcard";
+import Headerone from "../../Components/Headerone/Headerone"
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 
@@ -32,11 +33,11 @@ const Homepage = () => {
         )
        
       // Usestate for Hamburger display
-      const [toggle, setToggle] = useState(false)
+      // const [toggle, setToggle] = useState(false)
 
-      const handleToggle = () => {
-        return setToggle(prevToggle =>!prevToggle)
-      }
+      // const handleToggle = () => {
+      //   return setToggle(prevToggle =>!prevToggle)
+      // }
 
       // Usestate for Qualitycard component
       const [quality] = useState([
@@ -84,7 +85,8 @@ const Homepage = () => {
   
     return (
     <div>
-      <header className={homePageStyle.header}>
+      <Headerone mainlogo={logo} />
+      {/* <header className={homePageStyle.header}>
         <div>
           <img src={logo} alt="logo" />
         </div>
@@ -99,7 +101,7 @@ const Homepage = () => {
         <div id={homePageStyle.hamburger} onClick={handleToggle}>
             {toggle ? <div>&times;</div> :  <div>&#9776;</div>}
         </div>
-      </header>
+      </header> */}
 
       <img className={homePageStyle.backgroundpic} src={backgroundpic} alt="background-pic" />
       <section className={homePageStyle.chiefcontainer}>
