@@ -71,9 +71,9 @@
         display: none;
     } 
     
-    .active ul{
+    .active ul {
         display: block;
-        height: 70vh;
+        /* height: 70vh; */
         background-color: grey;
         text-align: center;
         transition: 0.5s;
