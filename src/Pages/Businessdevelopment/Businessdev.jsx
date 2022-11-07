@@ -13,7 +13,7 @@ const Businessdev = () => {
 
         <section className={bizdevStyle.hero}>
             <div>
-            <Headertwo logo={blacklogo} />
+                <Headertwo logo={blacklogo} />
             </div>
             <h1 className={bizdevStyle.heading}>Opportunities don't happen. Let's create them for your business.</h1>
         </section>
