@@ -5,7 +5,7 @@ import Contactpage from "./Pages/Contactpage/Contactpage"
 import Aboutpage from "./Pages/Aboutpage/Aboutpage"
 import Footer from "./Components/Footer/Footer"
 import Businessdev from './Pages/Businessdevelopment/Businessdev';
-
+import Realestate from './Pages/Realestate/Realestate';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Route path='Aboutpage' element={<Aboutpage/>} />
         <Route path='Contactpage' element={<Contactpage/>} />
         <Route path='Businessdev' element={<Businessdev/>} />
+        <Route path='Realestate' element={<Realestate/>} />
       </Routes>
       <Footer/>
       {/* <Homepage/>
