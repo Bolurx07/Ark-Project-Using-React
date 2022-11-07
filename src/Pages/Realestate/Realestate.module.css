@@ -1,0 +1,16 @@
+.hero{
+    background-image: url('../../Assets/realestatebackground.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-blend-mode: overlay; */
+    background-color: rgb(170, 157, 157);
+    
+}
+.h1{
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 53px;
+    letter-spacing: 0.065em;
+    color: #FFFFFF;
+    padding: 8rem 4rem 16rem 4rem;
+}
