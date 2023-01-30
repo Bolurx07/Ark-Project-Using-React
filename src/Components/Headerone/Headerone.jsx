@@ -23,7 +23,7 @@ const Headerone = ({mainlogo, autoride}) => {
                   <li id={head1Style.home}><Link to="/" >Home</Link></li>
                   <li><Link to="Aboutpage">About Us</Link></li>
                   <li><Link to="/Contactpage">Contact Us</Link></li>
-                  <li><button className={head1Style.navbutton}><Link to="#">Register</Link></button></li>
+                  <li><button className={head1Style.navbutton}><Link to="Signup">Register</Link></button></li>
               </ul>
           </nav>
           <div id={head1Style.hamburger} onClick={handleToggle}>

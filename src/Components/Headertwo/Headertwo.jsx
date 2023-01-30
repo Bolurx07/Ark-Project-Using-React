@@ -27,7 +27,7 @@ const Headertwo = ({logo, color, style}) => {
                   </ul>
               </nav>
               <ul>
-                  <li><button  className={head2Style.navbutton}><a href="#">Register</a></button></li>
+                  <li><button  className={head2Style.navbutton}><Link to="/Signup">Register</Link></button></li>
               </ul>
             </div>
         

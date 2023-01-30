@@ -1,0 +1,163 @@
+.loginContainer {
+    display: flex;
+    justify-content: stretch;
+  }
+  .loginContainer .loginsect1, .loginContainer .loginsect2 {
+    width: 50vw;
+    height: 100vh;
+  }
+  
+  .loginsect1 {
+    padding: 3rem;
+  }
+  .loginsect1 img {
+    width: 5rem;
+    cursor: pointer;
+  }
+  .loginsect1 .bckgrndimg {
+    margin: 5% auto;
+    width: 100%;
+  }
+  
+  .loginsect2 {
+    padding: 10% 100px;
+    background-color: #ffffff;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+  }
+  .loginsect2 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 3.5rem;
+    color:  #FF8400;
+  }
+  .loginsect2 p {
+    font-size: 20px;
+    margin-bottom: 10%;
+    color: #545F7D;
+  }
+  .loginsect2 #email, .loginsect2 #password {
+    display: block;
+    padding: 0.75rem;
+    margin: 1.25rem 0;
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    border-radius: 5px;
+    width: 25rem;
+  }
+  .loginsect2 #email::-moz-placeholder, .loginsect2 #password::-moz-placeholder {
+    font-size: 14px;
+    color: rgba(84, 95, 125, 0.15);
+  }
+  .loginsect2 #email:-ms-input-placeholder, .loginsect2 #password:-ms-input-placeholder {
+    font-size: 14px;
+    color: rgba(84, 95, 125, 0.15);
+  }
+  .loginsect2 #email::placeholder, .loginsect2 #password::placeholder {
+    font-size: 14px;
+    color: rgba(84, 95, 125, 0.15);
+  }
+  .loginsect2 .forgotpassword {
+    font-weight: 600;
+    font-size: 12px;
+    display: block;
+    color: #FF8400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .loginsect2 button {
+    background-color: #FF8400;
+    padding: 0.75rem 0;
+    width: 25rem;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .loginsect2 button:hover {
+    color: #FF8400;
+    background-color: #ffffff;
+    border: 2px solid #FF8400;
+  }
+
+  .acctdiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .acctdiv p{
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  .acctdiv a{
+    text-decoration: none;
+    margin: 0 1rem;
+    color: #FF8400;
+    transition: 0.5s;
+  }
+
+  .acctdiv a:hover{
+    transform: scaleX(1.1);
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .loginsect1 img {
+      width: 7rem;
+    }
+    .loginsect2 #email, .loginsect2 #password, .loginsect2 button {
+      width: 20rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .loginsect1 .bckgrndimg {
+      margin: 25% auto;
+    }
+    .loginsect2 {
+      padding: 10% 70px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .loginsect2 h2 {
+      font-size: 25px;
+    }
+    .loginsect2 p {
+      font-size: 15px;
+    }
+    .loginsect2 #email, .loginsect2 #password, .loginsect2 button {
+      max-width: 15rem;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .loginContainer {
+      display: block;
+    }
+    .loginContainer .loginsect1 {
+      width: 100vw;
+      height: 20vh;
+    }
+    .loginContainer .loginsect1 img {
+      width: 5rem;
+    }
+    .loginContainer .loginsect1 .bckgrndimg {
+      display: none;
+    }
+    .loginContainer .loginsect2 {
+      width: 100vw;
+      height: 70vh;
+      text-align: center;
+      box-shadow: none;
+      padding: 0 40px;
+      margin-top: 2rem;
+    }
+    .loginContainer .loginsect2 #email, .loginContainer .loginsect2 #password {
+      margin: 1.25rem auto;
+    }
+    .acctdiv{
+        justify-content: center;
+    }
+  }

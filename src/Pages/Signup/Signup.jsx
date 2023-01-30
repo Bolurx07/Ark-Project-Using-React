@@ -1,13 +1,10 @@
-import loginStyle from './Login.module.css';
+import loginStyle from '../Login/Login.module.css';
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
 import logoblack from '../../Assets/logoblack.svg';
 import loginimg from '../../Assets/bizdevbackground.svg';
 
-
-const Login = () => {
-
-
+const Signup = () => {
   return (
     <div className={loginStyle.loginContainer}>
 
@@ -19,20 +16,20 @@ const Login = () => {
         </section>
 
         <section className={loginStyle.loginsect2}>
-            <h2>Login!</h2>
-            <p>Enter details to login.</p>
+            <h2>SignUp!</h2>
+            <p>Enter details to register.</p>
             <form action="">
                 <input type="email" name="email" placeholder='Email' id={loginStyle.email} />
                 <input type="password" name="password" placeholder='Password' id={loginStyle.password} />
                 <span className={loginStyle.forgotpassword}>Forgot Password?</span>
                 <Link to="/">
-                    <button type="submit">Log in</button>
+                    <button type="submit">Sign Up</button>
                 </Link>
             </form>
             <div className={loginStyle.acctdiv}>
-                <p>Don't have an account?</p>
-                <Link to="/Signup">
-                    Sign up
+                <p>Already have an account?</p>
+                <Link to="/Login">
+                    Login
                 </Link>
             </div>
         </section>
@@ -40,4 +37,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signup

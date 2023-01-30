@@ -16,6 +16,7 @@ import Teamcard from '../../Components/Teamcard/Teamcard';
 import Headerone from "../../Components/Headerone/Headerone";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
+import Footer from '../../Components/Footer/Footer';
 
 
 
@@ -127,6 +128,8 @@ const Aboutpage = () => {
             </div>
         </section>
 
+    
+    <Footer />
 
     </div>
   )

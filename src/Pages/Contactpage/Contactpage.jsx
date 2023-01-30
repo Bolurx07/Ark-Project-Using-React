@@ -6,6 +6,7 @@ import logoblack from "../../Assets/logoblack.svg";
 import {Link} from 'react-router-dom'
 import contactPageStyle from "./Contactpage.module.css"
 import { useState, useEffect } from 'react';
+import Footer from '../../Components/Footer/Footer';
 
 
 const Contactpage = () => {
@@ -161,6 +162,7 @@ const Contactpage = () => {
             </form>
         </div>
     </section>
+    <Footer />
     </div>
   )
 }

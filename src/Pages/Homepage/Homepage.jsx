@@ -20,6 +20,7 @@ import Reviewcard from "../../Components/Reviewcard/Reviewcard";
 import Headerone from "../../Components/Headerone/Headerone"
 import { useState } from "react";
 import {Link} from 'react-router-dom';
+import Footer from "../../Components/Footer/Footer";
 
 
 
@@ -108,7 +109,7 @@ const Homepage = () => {
             </div>
             <div className={homePageStyle.headerbutton}>
               <button className={homePageStyle.headerbutton1}>
-                <a href="#">Sign Up</a>
+                <Link to="/Signup">Sign Up</Link>
               </button>
               <button className={homePageStyle.headerbutton2}>
                 <a href="#">Explore</a>
@@ -165,6 +166,8 @@ const Homepage = () => {
     </section>
     
     <img className={homePageStyle.ellipse4} src={ellipse2}alt="ellipse-4"/>
+
+    <Footer />
     </div>
   );
 };

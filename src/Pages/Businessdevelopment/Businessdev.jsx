@@ -5,6 +5,7 @@ import bizdevpic2 from "../../Assets/bizdev2.svg"
 import bizdevicon from "../../Assets/bizdev-icon.svg"
 import Headertwo from '../../Components/Headertwo/Headertwo'
 import blacklogo from "../../Assets/logoblack.svg";
+import Footer from '../../Components/Footer/Footer'
 
 
 const Businessdev = () => {
@@ -85,6 +86,8 @@ const Businessdev = () => {
                 <img className={bizdevStyle.bizdevpic} src={bizdevpic2} alt="bizdevpic"  />
             </div>
         </section>
+
+        <Footer />
     </div>
   )
 }
