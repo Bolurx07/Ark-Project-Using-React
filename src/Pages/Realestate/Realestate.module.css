@@ -12,5 +12,10 @@
     line-height: 53px;
     letter-spacing: 0.065em;
     color: #FFFFFF;
+    text-align: center;
     padding: 8rem 4rem 16rem 4rem;
+}
+
+#black {
+    color: black !important;
 }

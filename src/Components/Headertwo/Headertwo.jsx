@@ -3,7 +3,7 @@ import head2Style from "./Headertwo.module.css"
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
-const Headertwo = ({logo}) => {
+const Headertwo = ({logo, color, style}) => {
 
     // Usestate for Hamburger display
     const [toggle, setToggle] = useState(false)
@@ -19,9 +19,9 @@ const Headertwo = ({logo}) => {
                 <img src={logo} alt="logo" />
             </div>
             <div className={toggle ? head2Style.active : head2Style.navbar}>
-              <nav className={head2Style.mininav}>
+              <nav className={head2Style.mininav} id={color}>
                   <ul >
-                      <li id={head2Style.home}><Link to="/">Home</Link></li>
+                      <li  id={head2Style.home} style={style}><Link to="/">Home</Link></li>
                       <li><Link to="/Aboutpage">About Us</Link></li>
                       <li><Link to="/Contactpage">Contact Us</Link></li>
                   </ul>

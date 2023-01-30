@@ -6,6 +6,7 @@ import Aboutpage from "./Pages/Aboutpage/Aboutpage"
 import Footer from "./Components/Footer/Footer"
 import Businessdev from './Pages/Businessdevelopment/Businessdev';
 import Realestate from './Pages/Realestate/Realestate';
+import Login from './Pages/Login/Login';
 
 
 function App() {
@@ -13,17 +14,14 @@ function App() {
     <div>
       
       <Routes>
-        <Route path='/' element={<Homepage/>}/>
+        {/* <Route path='/' element={<Homepage/>}/>
         <Route path='Aboutpage' element={<Aboutpage/>} />
         <Route path='Contactpage' element={<Contactpage/>} />
         <Route path='Businessdev' element={<Businessdev/>} />
-        <Route path='Realestate' element={<Realestate/>} />
+        <Route path='Realestate' element={<Realestate/>} /> */}
       </Routes>
-      <Footer/>
-      {/* <Homepage/>
-      <Aboutpage/>
-      <Contactpage/>
-      <Footer/> */}
+      {/* <Footer/> */}
+      <Login />
     </div>
   );
 }
