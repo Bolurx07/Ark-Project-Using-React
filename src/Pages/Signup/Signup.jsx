@@ -1,10 +1,28 @@
 import loginStyle from '../Login/Login.module.css';
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserAuth } from '../../context/AuthContext';
 import logoblack from '../../Assets/logoblack.svg';
 import loginimg from '../../Assets/bizdevbackground.svg';
 
 const Signup = () => {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const { user, signUp } = UserAuth();
+    const navigate = useNavigate()
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          await signUp(email, password);
+            navigate('Aboutpage')
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    // console.log(signUp)
   return (
     <div className={loginStyle.loginContainer}>
 
@@ -18,14 +36,17 @@ const Signup = () => {
         <section className={loginStyle.loginsect2}>
             <h2>SignUp!</h2>
             <p>Enter details to register.</p>
-            <form action="">
-                <input type="email" name="email" placeholder='Email' id={loginStyle.email} />
-                <input type="password" name="password" placeholder='Password' id={loginStyle.password} />
-                <span className={loginStyle.forgotpassword}>Forgot Password?</span>
-                <Link to="/">
-                    <button type="submit">Sign Up</button>
-                </Link>
-            </form>
+            <div onSubmit={handleFormSubmit} >
+                <form >
+                    <input onChange={(e) => setEmail(e.target.value)} type="email"  placeholder='Email' id={loginStyle.email} />
+                    <input onChange={(e) => setPassword(e.target.value)} type="password"  placeholder='Password' id={loginStyle.password} />
+                    <span className={loginStyle.forgotpassword}>Forgot Password?</span>
+                    <Link to="/">
+                        <button>Sign Up</button>
+                    </Link>
+                </form>
+
+            </div>
             <div className={loginStyle.acctdiv}>
                 <p>Already have an account?</p>
                 <Link to="/Login">
