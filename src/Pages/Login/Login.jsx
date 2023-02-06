@@ -18,7 +18,7 @@ const Login = () => {
         setError('')
         try {
           await logIn(email, password)
-          navigate('Aboutpage')
+          navigate('/Aboutpage')
         } catch (error) {
           console.log(error);
           setError(error.message)
@@ -43,9 +43,11 @@ const Login = () => {
                 <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder='Email' id={loginStyle.email} />
                 <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder='Password' id={loginStyle.password} />
                 <span className={loginStyle.forgotpassword}>Forgot Password?</span>
-                <Link to="/">
-                    <button type="submit">Log in</button>
-                </Link>
+                    <button>
+                {/* <Link to="/"> */}
+                        Log in
+                {/* </Link>         */}
+                        </button>
             </form>
             <div className={loginStyle.acctdiv}>
                 <p>Don't have an account?</p>

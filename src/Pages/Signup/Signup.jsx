@@ -16,7 +16,7 @@ const Signup = () => {
         e.preventDefault();
         try {
           await signUp(email, password);
-            navigate('Aboutpage')
+            navigate('/Aboutpage')
         } catch (error) {
             console.log(error);
         }
@@ -36,17 +36,12 @@ const Signup = () => {
         <section className={loginStyle.loginsect2}>
             <h2>SignUp!</h2>
             <p>Enter details to register.</p>
-            <div onSubmit={handleFormSubmit} >
-                <form >
-                    <input onChange={(e) => setEmail(e.target.value)} type="email"  placeholder='Email' id={loginStyle.email} />
-                    <input onChange={(e) => setPassword(e.target.value)} type="password"  placeholder='Password' id={loginStyle.password} />
-                    <span className={loginStyle.forgotpassword}>Forgot Password?</span>
-                    <Link to="/">
-                        <button>Sign Up</button>
-                    </Link>
-                </form>
-
-            </div>
+            <form onSubmit={handleFormSubmit}>
+                <input onChange={(e) => setEmail(e.target.value)} type="email"  placeholder='Email' id={loginStyle.email} />
+                <input onChange={(e) => setPassword(e.target.value)} type="password"  placeholder='Password' id={loginStyle.password} />
+                <span className={loginStyle.forgotpassword}>Forgot Password?</span>
+                <button> Sign Up </button>
+            </form>
             <div className={loginStyle.acctdiv}>
                 <p>Already have an account?</p>
                 <Link to="/Login">
