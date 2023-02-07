@@ -41,6 +41,18 @@
     display: none;
 }
 
+.account{
+    display: flex;
+    align-items: center;
+}
+
+.hideUser{
+    display: none;
+}
+
+.showUser{
+    display: block;
+}
 @media screen and (max-width: 900px) {
 
     /* Hamburger & Menu dropdown display */

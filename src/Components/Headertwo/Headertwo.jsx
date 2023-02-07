@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom'
 
 const Headertwo = ({logo, color, style}) => {
 
+    
+
     // Usestate for Hamburger display
     const [toggle, setToggle] = useState(false)
 
