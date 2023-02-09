@@ -50,11 +50,6 @@ body{
     background-color: white;
     border: 2px solid black;
 }
-
-/* .navbutton a:hover{
-    color: black;
-} */
-
 #hamburger{
     display: none;
 }
@@ -185,8 +180,39 @@ body{
 
 }
 
+.account{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* color: white; */
+    font-size: 1.5rem;
+    
+}
 
+.account:hover{
+    font-size: 1.75rem;
+    transition: 1s;
+}
 
+.account p{
+    margin-right: 5px;
+}
+
+.hideUser{
+    display: none;
+}
+
+.showUser{
+    display: block;
+    /* color: white; */
+    font-size: 1rem;
+    position: absolute;
+}
+
+.showUser p{
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 768px) {

@@ -10,6 +10,7 @@
 .imglogo{
     flex: 40%;
     }
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -49,6 +50,40 @@
 
 #hamburger{
     display: none;
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+.account:hover{
+    font-size: 1.75rem;
+    transition: 1s;
+}
+
+.account p{
+    margin-right: 5px;
+}
+
+.hideUser{
+    display: none;
+}
+
+.showUser{
+    display: block;
+    color: white;
+    font-size: 1rem;
+    position: absolute;
+}
+
+.showUser p{
+    margin: 0.5rem 0;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {

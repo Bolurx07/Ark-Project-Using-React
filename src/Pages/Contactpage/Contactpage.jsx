@@ -1,16 +1,37 @@
-import React from 'react'
 import phoneicon from "../../Assets/phoneicon.svg";
 import messageicon from "../../Assets/messageicon.svg";
 import visiticon from "../../Assets/visiticon.svg";
 import logoblack from "../../Assets/logoblack.svg";
-import {Link} from 'react-router-dom'
-import contactPageStyle from "./Contactpage.module.css"
+import { Link, useNavigate } from 'react-router-dom';
+import contactPageStyle from "./Contactpage.module.css";
 import { useState, useEffect } from 'react';
 import Footer from '../../Components/Footer/Footer';
-
+import { UserAuth } from '../../context/AuthContext';
+import { FaArrowCircleDown } from 'react-icons/fa';
 
 const Contactpage = () => {
+    
+    //UserAuth to handle logged in User
+    const { user, logOut } = UserAuth();
+    const navigate = useNavigate();
+    console.log(user)
 
+    const handleLogout = async () => {
+      try {
+        await logOut();
+        navigate('/');
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+
+    // Usestate for Logged-in User display
+    const [loginToggle, setLoginToggle] = useState(false)
+
+    const handleLoginToggle = () => {
+      return setLoginToggle(prevToggle =>!prevToggle)
+    }
 
     // Usestate for Hamburger display
     const [toggle, setToggle] = useState(false)
@@ -20,16 +41,13 @@ const Contactpage = () => {
     }
 
     
-
-       
-
         // Form Validation
         const initialValues = {name: "", email: "", message: ""};
         const [formValues, setFormValues] = useState(initialValues);
         const [formErrors, setFormErrors] = useState({});
         const [isSubmit, setIsSubmit] = useState(false);
 
-        // const submitError = document.getElementById('removeerror')
+    
 
         const handleChange = (e) => {
             const { name, value } = e.target;
@@ -69,7 +87,6 @@ const Contactpage = () => {
             return errors;
         };
 
-        // submitError.style.display = 'none';
 
   return (
     <div>
@@ -85,7 +102,25 @@ const Contactpage = () => {
                 </ul>
             </nav>
             <ul>
-                <li><button  className={contactPageStyle.navbutton}><a href="#">Register</a></button></li>
+                <li>
+                    {
+                            user?.email 
+                            ?
+                            <div>
+                            <div onClick={handleLoginToggle} className={contactPageStyle.account}>
+                                <p>Account</p> 
+                                <FaArrowCircleDown />
+                            </div>
+                            <div className={loginToggle ? contactPageStyle.showUser : contactPageStyle.hideUser}>
+                                <p>Profile</p>
+                                <p>Settings</p>
+                                <p onClick={handleLogout}>Log Out</p>
+                            </div>
+                            </div>
+                            :
+                            <button  className={contactPageStyle.navbutton}><Link to="/Signup">Register</Link></button>
+                        }
+                </li>
             </ul>
         
             <div id={contactPageStyle.hamburger} onClick={handleToggle}>
