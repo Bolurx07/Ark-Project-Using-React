@@ -20,15 +20,18 @@ function App() {
           <Route path='/' element={<Homepage/>}/>
           <Route path='Login' element={<Login />} />
           <Route path='Signup' element={<Signup />} />
-          <Route path='Aboutpage' element={
-            <ProtectedRoute>
-              <Aboutpage/>
-            </ProtectedRoute>
-          
-          } />
+          <Route path='Aboutpage' element={<Aboutpage/>} />
           <Route path='Contactpage' element={<Contactpage/>} />
-          <Route path='Businessdev' element={<Businessdev/>} />
-          <Route path='Realestate' element={<Realestate/>} />
+          <Route path='Businessdev' element={
+            <ProtectedRoute>
+              <Businessdev/>
+            </ProtectedRoute>
+          } />
+          <Route path='Realestate' element={
+            <ProtectedRoute>
+              <Realestate/>
+            </ProtectedRoute>
+          } />
         </Routes>
       </AuthContextProvider>
     </>
