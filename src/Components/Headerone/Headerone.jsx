@@ -44,7 +44,7 @@ const Headerone = ({mainlogo, autoride}) => {
           <nav  className={toggle ? head1Style.active : head1Style.navbar }>
               <ul>
                   <li id={head1Style.home}><Link to="/" >Home</Link></li>
-                  <li><Link to="Aboutpage">About Us</Link></li>
+                  <li><Link to="/Aboutpage">About Us</Link></li>
                   <li><Link to="/Contactpage">Contact Us</Link></li>
                   <li>
                     {
@@ -62,7 +62,7 @@ const Headerone = ({mainlogo, autoride}) => {
                         </div>
                       </div>
                       :
-                      <button className={head1Style.navbutton}><Link to="Signup">Register</Link></button>
+                      <button className={head1Style.navbutton}><Link to="/Signup">Register</Link></button>
                     }
                     
                   </li>

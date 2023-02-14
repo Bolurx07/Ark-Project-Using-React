@@ -110,7 +110,12 @@
     #home{
     border-top: none;
     }
-
+    .account{
+        justify-content: center;
+    }
+    .showUser{
+        position: none;
+    }
     /* Removing Hover effect from Mobile screen */
     /* @media (hover: hover){
         .header ul li a:hover{
