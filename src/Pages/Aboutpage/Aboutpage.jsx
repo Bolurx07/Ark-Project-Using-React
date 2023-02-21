@@ -98,7 +98,7 @@ const Aboutpage = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat sit congue odio enim vitae ullamcorper eu quis amet.</p>
             </div>
             <div className={aboutPageStyle.mainteamcontainer}>
-                <Carousel className={aboutPageStyle.carousell} autoPlay='true' infiniteLoop='true' interval='5000' >
+                <Carousel className={aboutPageStyle.carousell} autoPlay='true' infiniteLoop='true' interval='5000' showThumbs={false}>
                     <div>
                         <div className={aboutPageStyle.teamcontainer1}>
                             {teamcad.map((item) =>( <Teamcard img={item.img} />))}   

@@ -100,11 +100,19 @@
     color: #FF8400;
     transition: 0.5s;
   }
-
   .acctdiv a:hover{
     transform: scaleX(1.1);
   }
-  
+  .error{
+    font-size: 8rem;
+    color: red;
+    text-transform: capitalize;
+  }
+
+  #mybutton{
+    background-color: #ff840081;
+  }
+
   @media screen and (max-width: 1050px) {
     .loginsect1 img {
       width: 7rem;
@@ -113,6 +121,7 @@
       width: 20rem;
     }
   }
+
   @media screen and (max-width: 900px) {
     .loginsect1 .bckgrndimg {
       margin: 25% auto;

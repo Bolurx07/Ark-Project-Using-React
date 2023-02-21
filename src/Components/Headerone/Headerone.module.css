@@ -128,3 +128,14 @@
         } 
     } */
 }
+
+@media screen and (max-width: 450px) {
+    .mainlogo img{
+        width: 4rem;
+    }
+
+    #hamburger{
+        font-size: 3rem;
+    }
+
+}

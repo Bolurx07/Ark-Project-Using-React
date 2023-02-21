@@ -225,12 +225,6 @@
         margin-bottom: 5rem;
     }
     
-    .aboutuscontainer img{
-        position: relative;
-        top: 5rem;
-        left: 3.5rem;
-        z-index: -1;
-    }
     .aboutuscontainer div {
         border-top: none;
     }

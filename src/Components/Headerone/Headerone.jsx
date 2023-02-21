@@ -10,7 +10,6 @@ const Headerone = ({mainlogo, autoride}) => {
 
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
-  console.log(user)
 
   const handleLogout = async () => {
     try {
@@ -38,7 +37,7 @@ const Headerone = ({mainlogo, autoride}) => {
   return (
     <div>
         <header id={autoride} className={head1Style.header}>
-          <div>
+          <div className={head1Style.mainlogo}>
             <img src={mainlogo} alt="logo" />
           </div>
           <nav  className={toggle ? head1Style.active : head1Style.navbar }>

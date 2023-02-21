@@ -9,9 +9,9 @@ import { signUpSchema } from '../../Schemas/Index';
 
 
 const onSubmit = async (values, actions) => {
-    // console.log(values);
+    console.log(values);
     // console.log(actions);
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 70000));
     actions.resetForm()
     
 }
@@ -29,29 +29,10 @@ const Signup = () => {
     });
     
 
-    console.log(values)
-
-    // useState for UserAuth
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
+    // user and navigate for UserAuth
     const { user, signUp } = UserAuth();
-    const navigate = useNavigate()
-    
-    // const firebaseMailChange = (e) => {
-    //     setEmail(e.target.value)
-    // }
+    const navigate = useNavigate();
 
-    // const firebasePasswordChange = (e) => {
-    //     setPassword(e.target.value)
-    // }
-
-    // const myHandleChange = () => {
-    //     handleChange;
-    //     firebaseMailChange();
-    //     firebasePasswordChange();
-    // }
-
-    // console.log(email)
     const handleFirebaseSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -62,13 +43,16 @@ const Signup = () => {
         }
     };
 
-    const handleFormSubmit = () => {
-        handleFirebaseSubmit();
-        handleSubmit;
-    }
+    // const handleMySubmit = (e) => {
 
+    //     if (isValid === true) {
+    //         handleSubmit();
+    //     } else {
+    //         handleFirebaseSubmit(e);
+    //     }
+    // }
 
-    // console.log(signUp)
+    console.log(isValid)
   return (
     <div className={loginStyle.loginContainer}>
 
@@ -92,7 +76,7 @@ const Signup = () => {
                     value={values.email} 
                     onBlur={handleBlur}
                 />
-                {errors.email && touched.email && <p className='error'>{errors.email}</p>}
+                {errors.email && touched.email && <p className={loginStyle.error}>{errors.email}</p>}
                 <input 
                     onChange={handleChange} 
                     type="password"  
@@ -102,10 +86,10 @@ const Signup = () => {
                     value={values.password} 
                     onBlur={handleBlur}
                 />
-                {errors.password && touched.password && <p className='error'>{errors.password}</p>}
+                {errors.password && touched.password && <p className={loginStyle.error}>{errors.password}</p>}
 
                 <span className={loginStyle.forgotpassword}>Forgot Password?</span>
-                <button disabled={!isValid}> Sign Up </button>
+                {isValid ? <button> Sign Up </button> : <button disabled id={loginStyle.mybutton}> Sign Up </button>}
             </form>
             <div className={loginStyle.acctdiv}>
                 <p>Already have an account?</p>
